@@ -1,0 +1,1 @@
+web: gunicorn skiresorts.wsgi
