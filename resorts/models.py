@@ -28,6 +28,10 @@ class Resort(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
 
 
+def ___str__(self):
+    return self.name
+
+
 class Contact(models.Model):
     name = models.CharField(null=False, blank=False)
     email = models.EmailField(null=False, blank=False)
@@ -38,3 +42,20 @@ class Rating(models.Model):
     resort = models.ForeignKey(Resort, on_delete=models.CASCADE, null=False, blank=False)  # noqa
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)  # noqa
     rating = models.IntegerField(default=10, null=False, blank=False)
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')  # noqa
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+
+class Meta:
+    ordering = ['created_on']
+
+
+def ___str__(self):
+    return f'Comment {self.body} by {self.name}'
