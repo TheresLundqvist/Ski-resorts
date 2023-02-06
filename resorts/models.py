@@ -2,11 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+STATUS = ((0, "Draft"), (1, "Published"))
+
 
 class Resort(models.Model):
     image = CloudinaryField("image", default="placeholder")
-    name = models.CharField(null=False, blank=False)
-    description = models.TextField(null=False, blank=False)
+    name = models.CharField(null=False, blank=False, unique=True)
+    description = models.TextField(max_length=2000, null=False, blank=False)
     location = models.CharField(null=False, blank=False)
     hours = models.CharField(null=False, blank=False)
     opening_season = models.charField(null=False, blank=False)
@@ -23,6 +25,7 @@ class Resort(models.Model):
     easy_slopes = models.IntegerField(default=0, null=False, blank=False)
     intermediate_slopes = models.IntegerField(default=0, null=False, blank=False)  # noqa
     difficult_slopes = models.IntegerField(default=0, null=False, blank=False)
+    status = models.IntegerField(choices=STATUS, default=0)
 
 
 class Contact(models.Model):
