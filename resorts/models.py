@@ -1,15 +1,17 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django_countries.fields import CountryField
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 class Resort(models.Model):
     image = CloudinaryField("image", default="placeholder")
-    name = models.CharField(max_length=200, null=False, blank=False)
+    resort = models.CharField(max_length=200, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
     location_address = models.CharField(max_length=200, null=False, blank=False)  # noqa
+    country = CountryField(blank_label="(select country)", default=True, max_length=80)  # noqa
     hours = models.CharField(max_length=200, null=False, blank=False)
     opening_season = models.CharField(max_length=300, null=False, blank=False)  # noqa
     has_ski_rentals = models.BooleanField(default=True, null=False, blank=False)  # noqa
@@ -27,8 +29,8 @@ class Resort(models.Model):
     difficult_slopes = models.IntegerField(default=0, null=False, blank=False)
     status = models.IntegerField(choices=STATUS, default=0)
 
-    def ___str__(self):
-        return self.name
+    def __str__(self):
+        return self.resort
 
 
 class Contact(models.Model):
