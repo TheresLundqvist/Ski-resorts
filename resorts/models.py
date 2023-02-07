@@ -9,15 +9,15 @@ class Resort(models.Model):
     image = CloudinaryField("image", default="placeholder")
     name = models.CharField(max_length=200, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
-    location = models.CharField(max_length=200, null=False, blank=False)
+    location_address = models.CharField(max_length=200, null=False, blank=False)  # noqa
     hours = models.CharField(max_length=200, null=False, blank=False)
     opening_season = models.CharField(max_length=300, null=False, blank=False)  # noqa
     has_ski_rentals = models.BooleanField(default=True, null=False, blank=False)  # noqa
     has_ski_lessons = models.BooleanField(default=False, null=False, blank=False)  # noqa
     offers_accommodation = models.BooleanField(default=False, null=False, blank=False)  # noqa
     restaurants = models.IntegerField(default=0, null=False, blank=False)
-    adults_ski_pass_price = models.IntegerField(default=0, null=False, blank=False)  # noqa
-    children_ski_pass_price = models.IntegerField(default=0, null=False, blank=False)  # noqa
+    adults_ski_pass_price = models.CharField(max_length=80, null=False, blank=False)  # noqa
+    children_ski_pass_price = models.CharField(max_length=80, null=False, blank=False)  # noqa
     gondola_lifts = models.BooleanField(default=True, null=False, blank=False)
     chair_lifts = models.BooleanField(default=True, null=False, blank=False)
     button_lifts = models.BooleanField(default=True, null=False, blank=False)
