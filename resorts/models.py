@@ -2,7 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-STATUS=((0, 'Draft'), (1, 'Published'))
+STATUS = ((0, 'Draft'), (1, 'Published'))
+
 
 class Resort(models.Model):
     image = CloudinaryField("image", default="placeholder")
@@ -10,7 +11,7 @@ class Resort(models.Model):
     description = models.TextField(null=False, blank=False)
     location = models.CharField(max_length=200, null=False, blank=False)
     hours = models.CharField(max_length=200, null=False, blank=False)
-    opening_season = models.CharField(max_length=300, null=False, blank=False) 
+    opening_season = models.CharField(max_length=300, null=False, blank=False)
     has_ski_rentals = models.BooleanField(default=True, null=False, blank=False)
     has_ski_lessons = models.BooleanField(default=False, null=False, blank=False)
     offers_accommodation = models.BooleanField(default=False, null=False, blank=False)
@@ -41,6 +42,7 @@ class Rating(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
     rating = models.IntegerField(default=10, null=False, blank=False)
 
+
 class Comment(models.Model):
     post = models.ForeignKey(Resort, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=80)
@@ -51,6 +53,6 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['created_on']
-    
+
     def __str__(self):
         return f'Comment {self.body} by {self.name}'
