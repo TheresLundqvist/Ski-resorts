@@ -5,7 +5,7 @@ from .models import Resort
 
 class ResortList(generic.ListView):
     model = Resort
-    queryset = Resort.objects.filter(status=1).order_by('-created_on')
+    queryset = Resort.objects.filter(status=1).order_by('country')
     template_name = 'index.html'
     paginate_by = 6
 

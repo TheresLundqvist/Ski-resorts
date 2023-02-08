@@ -43,7 +43,10 @@ class Contact(models.Model):
 class Rating(models.Model):
     resort = models.ForeignKey(Resort, on_delete=models.CASCADE, null=False, blank=False)  # noqa
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)  # noqa
-    rating = models.IntegerField(default=10, null=False, blank=False)
+    star_rating = models.ManyToManyField(User, blank=True, related_name='resort_rating')  # noqa
+
+    def number_of_stars(self):
+        return self.rating.count()
 
 
 class Comment(models.Model):

@@ -19,7 +19,7 @@ class ContactAdmin(admin.ModelAdmin):
 
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
-    list_display = ('resort', 'user', 'rating')
+    list_display = ('resort', 'user')
 
 
 @admin.register(Comment)
