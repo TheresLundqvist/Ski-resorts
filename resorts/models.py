@@ -9,6 +9,7 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 class Resort(models.Model):
     image = CloudinaryField("image", default="placeholder")
     resort = models.CharField(max_length=200, null=False, blank=False)
+    slug = models.SlugField(max_length=200, unique=True, null=True, blank=False)  # noqa
     description = models.TextField(null=False, blank=False)
     location_address = models.CharField(max_length=200, null=False, blank=False)  # noqa
     country = CountryField(blank_label="(select country)", default=True, max_length=80)  # noqa
