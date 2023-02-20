@@ -1,20 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&family=Rubik+Gemstones&display=swap');
+
 body {
-    background-color: #F9FAFC;
+    background-color: #EEEEEE;
 }
 
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
+.logo {
+    font-family: Rubik Gemstones, sans-serif;
+    font-size: 2rem;
+    color: #112B3C;
+    position: absolute;
+    top: 0;
+    left: 20;
+}
+
+.slogan {
+    font-family: Josefin Sans, sans-serif;
+    font-weight: 300;
+    font-size: smaller;
+    color: #112B3C;
+    padding-top: 7px;
+    position: absolute;
+    top: 200;
+    left: 20;
+}
+
+.navbar-toggler {
+    align-items: start;
 }
 
 .blue-o {
-    color: #B7C4CF;
-}
-
-.thin {
-    font-weight: 300;
     color: #B7C4CF;
 }
 
