@@ -28,6 +28,15 @@ body {
     align-items: start;
 }
 
+.nav-item {
+    padding-top: 5px;
+}
+
+#navbarText {
+    font-family: Josefin Sans, sans-serif;
+    color: #E84610;
+}
+
 .blue-o {
     color: #B7C4CF;
 }
