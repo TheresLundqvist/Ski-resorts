@@ -13,10 +13,10 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in resort.featured_image.url %}
+                                {% if "placeholder" in resort.image.url %}
                                 <img class="card-img-top" {% load static %} src="{% static "media/resort-placeholder.jpeg">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ resort.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ resort.image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="resort-name">Resort: {{ resort. }}</p>
