@@ -14,13 +14,10 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in resort.image.url %}
-                                <img class="card-img-top" {% load static %} src="{% static "media/resort-placeholder.jpeg">
+                                <img class="card-img-top" {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" />
                                 {% else %}
                                 <img class="card-img-top" src=" {{ resort.image.url }}">
                                 {% endif %}
-                                <div class="image-flash">
-                                    <p class="resort-name">Resort: {{ resort. }}</p>
-                                </div>
                             </div>
                             <a href="#" class="resort-link">
                                 <h2 class="card-title">{{ resort.resort }}</h2>
