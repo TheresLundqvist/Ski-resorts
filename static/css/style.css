@@ -69,18 +69,16 @@ body {
     position: relative;
 }
 
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #B7C4CF;
-}
-
-.resort-name {
-    color: white;
+.resort-link {
+    color: #112B3C;
     margin: 4px;
     text-transform: uppercase;
+    text-decoration: none;
+    font-family: Josefin Sans, sans-serif;
+}
+
+.resort-link:hover {
+    color: #E84610;
 }
 
 .masthead {
@@ -115,26 +113,6 @@ body {
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-}
-
-.resort-link {
-    text-decoration: none;
-    color: #445261;
-}
-
-.resort-link:hover,
-.page-link {
-    color: #E84610;
-}
-
-.post-title {
-    margin-top: 20%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
 }
 
 .btn-signup {

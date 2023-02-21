@@ -2,11 +2,21 @@
 
 {% block content %}
 
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <img class="img-fluid" {% load static %} src="{% static 'media/hero-image.jpeg' %}" alt="Two skiers on their way to the top">
+            <div class="card-title card-img-overlay">Find the Ski Resort Best suited for You!</div>
+            <div class="card-subtitle card-img-overlay">All resorts listed in Sweden in one place</div>
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid">
     <div class="row">
 
         <!-- Resort Entries Column -->
-        <div class="col-12 mt-3 left">
+        <div class="col-12 mt-3">
             <div class="row">
             {% for resort in resort_list %}
                 <div class="col-md-4">
