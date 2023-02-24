@@ -49,20 +49,57 @@ body {
 
 /* Background image */
 .bg-image {
+    position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    background-image: url('/static/media/hero-image.jpeg');
+    height: 60vh;
+    opacity: 0.3;
 }
 
-.img-text {
-    position: absolute;
-    top: 20vh;
-    left: 5vw;
+.img-intro {
     color: #E84610;
-    font-size: 1em;
-    font-weight: 600;
+    font-size: 1.8em;
+    font-weight: 700;
     font-family: Josefin Sans, sans-serif;
+    position: absolute;
+    top: 250px;
+    left: 10px;
+    text-transform: uppercase;
+}
+
+.intro-exp {
+    background-color: #112b3c;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: Josefin Sans, sans-serif;
+    position: absolute;
+    bottom: 320px;
+    left: 10px;
+    width: 93vw;
+    height: 4.5vh;
+    padding: 5px;
+}
+
+#view-all {
+    text-decoration: none;
+    color: #fff;
+    background-color: #E84610;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: josefin sans, sans-serif;
+    position: absolute;
+    bottom: 280px;
+    left: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+#view-all:hover {
+    color:#112B3C;
+    border-bottom: 1px solid #112B3C;
 }
 
 /* background colors */
