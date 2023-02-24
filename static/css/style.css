@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&family=Rubik+Gemstones&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,600;0,700;1,600&family=Rubik+Gemstones&display=swap');
 
 body {
     background-color: #EEEEEE;
 }
+
+/* Logo and Slogan */
 
 .logo {
     font-family: Rubik Gemstones, sans-serif;
@@ -26,6 +28,8 @@ body {
     left: 20;
 }
 
+/* Navigation */
+
 .navbar-toggler {
     align-items: start;
 }
@@ -42,6 +46,26 @@ body {
     font-family: Josefin Sans, sans-serif;
     color: #E84610;
 }
+
+/* Background image */
+.bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.img-text {
+    position: absolute;
+    top: 20vh;
+    left: 5vw;
+    color: #E84610;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: Josefin Sans, sans-serif;
+}
+
+/* background colors */
 
 
 .blue-o {
@@ -65,10 +89,6 @@ body {
     background-color: transparent;
 }
 
-.image-container {
-    position: relative;
-}
-
 .resort-link {
     color: #112B3C;
     margin: 4px;
@@ -79,40 +99,6 @@ body {
 
 .resort-link:hover {
     color: #E84610;
-}
-
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
 }
 
 .btn-signup {
