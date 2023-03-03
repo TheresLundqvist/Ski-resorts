@@ -54,7 +54,7 @@
         {% for resort in resort_list %}
         <div class="col-md-4">
           <div class="card mb-4">
-            <div class="card mx-auto" style="width: 20rem;">
+            <div class="card">
               {% if "placeholder" in resort.image.url %}
               <img class="card-img-top" {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" />
               {% else %}

@@ -4,13 +4,19 @@ body {
     background-color: #eee;
 }
 
-/* Logo and Slogan */
+/* Navbar */
+
+.nav {
+    padding-right: 2px;
+}
+
 .navbar-brand {
     font-family: Josefin Sans, Sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     font-style: italic;
     font-size: 1.8em;
+    margin-right: unset;
 }
 
 .navbar-nav {
@@ -20,11 +26,18 @@ body {
 .btn-search {
     background-color: #E84610;
     color: #f8f9fa;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .btn-search:hover {
     background-color: #f8f9fa;
     color: #E84610;
+}
+
+.search-bar {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .navbar-toggler {
@@ -36,19 +49,6 @@ body {
     color: #112B3C;
 }
 
-.nav-item {
-    padding-top: 5px;
-}
-
-.nav-item a {
-    font-weight: 500;
-}
-
-#navbarText {
-    font-family: Josefin Sans, sans-serif;
-    color: #E84610;
-}
-
 /* Background image */
 .carousel-inner > .item {
     position: relative;
@@ -57,10 +57,10 @@ body {
 .carousel-caption {
     background-color: #ffffff6e;
     position: absolute;
-    top: 15%;
-    left: 1%;
-    height: 28%;
-    width: 60%;
+    top: 22%;
+    left: 4%;
+    height: 40%;
+    width: 90%;
     transform: translateY(-50%);
 }
 
@@ -70,24 +70,25 @@ body {
 
 .img-intro {
     color: #E84610;
-    font-size: 2.5em;
+    font-size: 1em;
     font-weight: 700;
     font-family: Josefin Sans, sans-serif;
     text-transform: uppercase;
 }
 
 .intro-exp {
-    font-size: 1.2em;
+    font-size: 0.8em;
     color: #E84610;
     font-family: Tilt Neon, sans-serif;
     padding: 5px;
+    margin-bottom: 60px;
 }
 
 #view-all {
     text-decoration: none;
     color: #fff;
     background-color: #E84610;
-    font-size: 1em;
+    font-size: 0.8em;
     font-style: italic;
     font-weight: 500;
     font-family: josefin sans, sans-serif;
@@ -100,28 +101,7 @@ body {
     border-bottom: 1px solid #112B3C;
 }
 
-/* Card */
-
-
-/* background colors */
-
-
-.blue-o {
-    color: #B7C4CF;
-}
-
-.light-bg {
-    background-color: #fff;
-}
-
-.main-bg {
-    background-color: #F9FAFC;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
+/* Resort cards */
 
 .resort-link {
     color: #112B3C;
@@ -141,34 +121,6 @@ body {
     font-family: Josefin Sans, sans-serif;
 }
 
-.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
-
-.link {
-    color: #23BBBB;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
 .btn-org {
     font-size: 1em;
     background-color: #E84610;
@@ -183,15 +135,9 @@ body {
     color: #fff;
 }
 
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
 /* footer */
 footer {
+    background-color: #fff;
     text-align: center;
 }
 
@@ -225,23 +171,85 @@ footer {
 
 /* Media Queries */
 
-@media screen and (max-width: 600px) {
-    .img-intro {
-        font-size: 1em;
+/* For media screens from 350px */
+@media screen and (min-width: 350px) {
+    .search-bar {
+        padding: unset;
     }
 
-    .intro-exp {
-        font-size: 0.8em;
-    }
-
-    #view-all {
-        font-size: 0.8em;
+    .search-bar input {
+        margin-right: 0rem;
     }
 }
 
+/* For media screens from 600px and up */
+@media screen and (min-width: 600px) {
+    .img-intro {
+        font-size: 1.5em;
+        margin-bottom: 0;
+    }
+
+    .intro-exp {
+        margin-bottom: 5px;
+    }
+
+    .carousel-caption {
+        top: 22%;
+        left: 1%;
+        height: 42%;
+        width: 60%;
+    }
+}
+
+/* For media screens from 750px and up */
 @media screen and (min-width: 750px) {
     .card-img-top {
     height: 15rem;
     object-fit: cover;
+    }
+
+    .carousel-caption {
+        width: 80%;
+        height: 37%;
+    }
+
+    .img-intro {
+        font-size: 2em;
+    }
+
+    .intro-exp {
+        font-size: 1em;
+    }
+}
+
+
+
+/* For media screens from 992px and up */
+@media screen and (min-width: 992px) {
+    .img-intro {
+        font-size: 2em;
+    }
+
+    #view-all {
+        font-size: 1em;
+    }
+
+    .carousel-caption {
+        width: 55%;
+        height: 28%;
+        top: 17%;
+    }
+
+    .navbar-brand {
+        margin-right: 50px;
+    }
+}
+
+/* For media screens from 1200px and up */
+@media screen and (min-width: 1200px) {
+    .carousel-caption {
+        width: 47%;
+        height: 22%;
+        top: 15%;
     }
 }
