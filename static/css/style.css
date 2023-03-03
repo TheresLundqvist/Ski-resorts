@@ -161,8 +161,12 @@ footer {
     color: #E84610;
 }
 
+.social:hover {
+    color: #112B3C;
+}
+
 .social i {
-    padding: 5px;
+    padding: 10px;
 }
 
 .dropdown-menu {
