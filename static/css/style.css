@@ -1,42 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,600;0,700;1,600&family=Rubik+Gemstones&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;1,400;1,500&family=Tilt+Neon&display=swap');
 
 body {
-    background-color: #EEEEEE;
+    background-color: #eee;
 }
 
 /* Logo and Slogan */
-
-.logo {
-    font-family: Rubik Gemstones, sans-serif;
-    font-size: 2.5rem;
-    color: #112B3C;
-    line-height: 1;
-    padding-top: 4px;
-    position: absolute;
-    top: 0;
-    left: 20;
+.navbar-brand {
+    font-family: Josefin Sans, Sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.8em;
 }
 
-.slogan {
+.navbar-nav {
     font-family: Josefin Sans, sans-serif;
-    font-weight: 300;
-    font-size: smaller;
-    color: #112B3C;
-    padding-top: 7px;
-    padding-bottom: 10px;
-    position: absolute;
-    top: 150;
-    left: 20;
 }
 
-/* Navigation */
+.btn-search {
+    background-color: #E84610;
+    color: #f8f9fa;
+}
+
+.btn-search:hover {
+    background-color: #f8f9fa;
+    color: #E84610;
+}
 
 .navbar-toggler {
     align-items: start;
-}
-
-.navbar-toggler-icon {
-    background-image: none;
+    padding: 4px 7px;
 }
 
 .navbar-toggler-icon::before {
@@ -47,8 +40,8 @@ body {
     padding-top: 5px;
 }
 
-.nav-link {
-    font-weight: bold;
+.nav-item a {
+    font-weight: 500;
 }
 
 #navbarText {
@@ -66,7 +59,7 @@ body {
     position: absolute;
     top: 15%;
     left: 1%;
-    height: 20%;
+    height: 28%;
     width: 60%;
     transform: translateY(-50%);
 }
@@ -85,8 +78,8 @@ body {
 
 .intro-exp {
     font-size: 1.2em;
-    font-weight: 400;
-    font-family: Josefin Sans, sans-serif;
+    color: #E84610;
+    font-family: Tilt Neon, sans-serif;
     padding: 5px;
 }
 
@@ -94,8 +87,9 @@ body {
     text-decoration: none;
     color: #fff;
     background-color: #E84610;
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 500;
     font-family: josefin sans, sans-serif;
     padding: 10px;
     text-transform: uppercase;
@@ -105,6 +99,8 @@ body {
     color:#112B3C;
     border-bottom: 1px solid #112B3C;
 }
+
+/* Card */
 
 
 /* background colors */
@@ -116,10 +112,6 @@ body {
 
 .light-bg {
     background-color: #fff;
-}
-
-.org-bg {
-    background-color: #E84610;
 }
 
 .main-bg {
@@ -141,6 +133,12 @@ body {
 
 .resort-link:hover {
     color: #E84610;
+}
+
+.resort-text {
+    color: #112B3C;
+    text-decoration: none;
+    font-family: Josefin Sans, sans-serif;
 }
 
 .btn-signup {
@@ -171,6 +169,20 @@ body {
     background: transparent;
 }
 
+.btn-org {
+    font-size: 1em;
+    background-color: #E84610;
+    color: #eee;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: Josefin Sans, sans-serif;
+}
+
+.btn-org:hover {
+    background-color: #112B3C;
+    color: #fff;
+}
+
 .btn-like:hover,
 .btn-like:active {
     color: #E84610;
@@ -179,11 +191,57 @@ body {
 }
 
 /* footer */
+footer {
+    text-align: center;
+}
 
-.footer {
-    font-family: Josefin sans, sans-serif;
-    font-size: 1.2em;
-    color: #112B3C;
-    font-weight: 400;
+.student {
+    font-size: 0.7em;
+    color: #5d646b;
+}
+
+.follow {
+    color: #5d646b;
+    font-family: Josefin Sans, Sans-serif;
+    font-weight: 500;
+    font-style: italic;
     text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+}
+
+.social {
+    font-size: 2em;
+    color: #E84610;
+}
+
+.social i {
+    padding: 5px;
+}
+
+.dropdown-menu {
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+    .img-intro {
+        font-size: 1em;
+    }
+
+    .intro-exp {
+        font-size: 0.8em;
+    }
+
+    #view-all {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .card-img-top {
+    height: 15rem;
+    object-fit: cover;
+    }
 }
