@@ -103,16 +103,12 @@ body {
 
 /* Resort cards */
 
-.resort-link {
+.resort {
     color: #112B3C;
     margin: 4px;
     text-transform: uppercase;
     text-decoration: none;
     font-family: Josefin Sans, sans-serif;
-}
-
-.resort-link:hover {
-    color: #E84610;
 }
 
 .resort-text {
