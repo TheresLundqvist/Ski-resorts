@@ -75,18 +75,14 @@
             <div>
                 <h3>Prices <i class="fa-solid fa-hand-holding-dollar"></i></h3>
                 <table class="table table-bordered table-responsive">
-                    <thead>
-                        <tr>
-                            <th scope="col">Children</th>
-                            <th scope="col">Adults</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{{ resort.adults_ski_pass_price| safe }}</td>
-                            <td>{{ resort.children_ski_pass_price| safe }}</td>
-                        </tr>
-                    </tbody>
+                    <tr>
+                        <th scope="row">Children</th>
+                        <td>{{ resort.children_ski_pass_price| safe }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Adults</th>
+                        <td>{{ resort.adults_ski_pass_price| safe }}</td>
+                    </tr>
                 </table>
             </div>
             <div>
