@@ -6,6 +6,7 @@
     <div class="card-body">
         <h5 class="card-title resort">{{ resort.resort }}</h5>
         <p class="card-text">{{ resort.description | safe }}</p>
+        <hr />
         <div>
             <h3>Find us here <i class="fa-solid fa-map-pin"></i></h3>
             <p>{{ resort.location_address | safe }}</p>
@@ -25,8 +26,20 @@
         </div>
         <div>
             <h3>Prices <i class="fa-solid fa-hand-holding-dollar"></i></h3>
-            {{ resort.adults_ski_pass_price| safe }}
-            {{ resort.children_ski_pass_price| safe }}
+            <table class="table table-bordered table-responsive">
+                <thead>
+                  <tr>
+                    <th scope="col">Children</th>
+                    <th scope="col">Adults</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{ resort.adults_ski_pass_price| safe }}</td>
+                    <td>{{ resort.children_ski_pass_price| safe }}</td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
         <div>
             <h3>Lifts <i class="fa-solid fa-cable-car"></i></h3>
@@ -37,9 +50,9 @@
         </div>
         <div>
             <h3>Slopes <i class="fa-solid fa-mountain-sun"></i></h3>
-            {{ resort.easy_slopes| safe }}
-            {{ resort.intermediate_slopes| safe }}
-            {{ resort.difficult_slopes| safe }}
+            <p>{{ resort.easy_slopes| safe }}</p>
+            <p>{{ resort.intermediate_slopes| safe }}</p>
+            <p>{{ resort.difficult_slopes| safe }}</p>
         </div>
     </div>
 </div>
