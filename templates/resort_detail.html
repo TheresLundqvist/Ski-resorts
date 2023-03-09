@@ -1,33 +1,64 @@
 {% extends 'base.html' %} {% block content %}
-
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Resort title goes in these h1 tags -->
-                <h1 class="resort-link">{{ resort.resort }}</h1>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The image URL goes in the src attribute -->
-                {% if "placeholder" in resort.image.url %}
-                <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" width="100%">
-                {% else %}
-                <img src=" {{ resort.image.url }}" width="100%">
-                {% endif %}
-            </div>
+{% if "placeholder" in resort.image.url %}
+<div class="card w-100" style="width: 18rem;">
+    <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" class="card-img-top"
+        alt="ski resorts picture">
+    <div class="card-body">
+        <h5 class="card-title resort">{{ resort.resort }}</h5>
+        <p class="card-text">{{ resort.description | safe }}</p>
+        <div>
+            <h3>Find us here <i class="fa-solid fa-map-pin"></i></h3>
+            <p>{{ resort.location_address | safe }}</p>
+            <p>{{ resort.country | safe }}</p>
+        </div>
+        <div>
+            <h3>We are open <i class="fa-regular fa-clock"></i></h3>
+            <p>{{ resort.opening_season| safe }}</p>
+            <p>{{ resort.hours| safe }}</p>
+        </div>
+        <div>
+            <h3>We offer <i class="fa-solid fa-circle-info"></i></h3>
+            <p> {{ resort.has_ski_rentals| safe }}</p>
+            <p>{{ resort.has_ski_lessons| safe }}</p>
+            <p>{{ resort.offers_accommodation| safe }}</p>
+            <p>{{ resort.restaurants| safe }}</p>
+        </div>
+        <div>
+            <h3>Prices <i class="fa-solid fa-hand-holding-dollar"></i></h3>
+            {{ resort.adults_ski_pass_price| safe }}
+            {{ resort.children_ski_pass_price| safe }}
+        </div>
+        <div>
+            <h3>Lifts <i class="fa-solid fa-cable-car"></i></h3>
+            <p>{{ resort.gondola_lifts| safe }}</p>
+            <p>{{ resort.chair_lifts| safe }}</p>
+            <p>{{ resort.button_lifts| safe }}</p>
+            <p>{{ resort.moving_carpet_lifts| safe }}</p>
+        </div>
+        <div>
+            <h3>Slopes <i class="fa-solid fa-mountain-sun"></i></h3>
+            {{ resort.easy_slopes| safe }}
+            {{ resort.intermediate_slopes| safe }}
+            {{ resort.difficult_slopes| safe }}
         </div>
     </div>
 </div>
+<!-- <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" class="img-fluid">
+{% else %}
+<img src=" {{ resort.image.url }}" class="img-fluid">
+{% endif %}
+<div class="card-title">
+    <h1 class="resort">{{ resort.resort }}</h1>
+</div> -->
 
-<div class="container">
+
+<!-- <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left top">
             <div class="card-body">
-                <!-- The resort content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
                     {{ resort.description | safe }}
-                    <hr/>
+                    <hr />
                     <br>
                     Find us here <i class="fa-solid fa-map-pin"></i>
                     <br>
@@ -67,13 +98,12 @@
                 <div class="row">
 
                     <div class="col-1">
-                        <!-- The number of likes goes before the closing strong tag -->
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ resort.star_rating }} </strong>
+                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ rating.star_rating }}
+                        </strong>
                     </div>
                     <div class="col-1">
                         {% with comments.count as total_comments %}
                         <strong class="text-secondary"><i class="far fa-comments"></i>
-                            <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
                         {% endwith %}
                     </div>
@@ -90,30 +120,24 @@
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- The comment's created date goes here -->
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- For later -->
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 {% endblock content %}

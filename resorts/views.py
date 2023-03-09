@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Resort
+from .models import Resort, Rating
 
 
 class ResortList(generic.ListView):
@@ -23,5 +23,17 @@ class ResortDetail(View):
             {
                 "resort": resort,
                 "comments": comments
+            },
+        )
+
+
+class RatingDetail(View):
+    def get(self, request, *args, **kwargs):
+        rating = Rating.number_of_stars
+        return render(
+            request,
+            "resort_detail.html",
+            {
+                "rating": rating
             },
         )
