@@ -10,12 +10,12 @@
     {% endif %}
     <div class="card-body">
         <h5 class="card-title resort">{{ resort.resort }}</h5>
-        <p class="card-text">{{ resort.description | safe }}</p>
+        <p class="text-p">{{ resort.description | safe }}</p>
         <hr />
         <div>
             <h3 class="text-h3"><i class="fa-solid fa-map-pin"></i> Find us here</h3>
-            <p>{{ resort.location_address | safe }}</p>
-            <p>{{ resort.country | safe }}</p>
+            <p class="text-p">{{ resort.location_address | safe }}</p>
+            <p class="text-p">{{ resort.country | safe }}</p>
         </div>
         <hr />
         <div>
@@ -166,11 +166,21 @@
     <div class="row">
         <div class="card-body col-sm-6">
             <h5 class="card-title">Rating</h5>
-            <p class="card-text"><i class="fa-regular fa-heart"></i>{{ rating.star_rating }}</p>
+            <p class="text-p"><i class="fa-regular fa-heart"></i>{{ rating.star_rating }}</p>
         </div>
         <div class="card-body col-sm-6">
             <h5 class="card-title">Comments</h5>
-            <p class="card-text">This is a comment.</p>
+            {% for comment in comments %}
+            <div class="comments" style="padding: 10px;">
+                <p class="font-weight-bold">
+                    {{ comment.name }}
+                    <span class=" text-muted font-weight-normal">
+                        {{ comment.created_on }}
+                    </span> wrote:
+                </p>
+                {{ comment.body | linebreaks }}
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>

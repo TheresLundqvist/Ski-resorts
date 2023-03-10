@@ -15,19 +15,20 @@ body {
     text-transform: uppercase;
     font-weight: 500;
     font-style: italic;
-    font-size: 1.8em;
+    font-size: 1.7em;
     margin-right: unset;
     padding-left: 5px;
 }
 
 .navbar-nav {
     font-family: Josefin Sans, sans-serif;
+    margin-left: 10px;
 }
 
 .btn-search {
     background-color: #E84610;
     color: #f8f9fa;
-    margin-right: 5px;
+    margin-right: 10px;
     margin-left: 5px;
 }
 
@@ -38,12 +39,13 @@ body {
 
 .search-bar {
     margin-left: 5px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .navbar-toggler {
     align-items: start;
     padding: 4px 7px;
+    margin-right: 10px;
 }
 
 .navbar-toggler-icon::before {
@@ -149,6 +151,12 @@ body {
 .text-h3 {
     text-transform: uppercase;
     font-size: 1em;
+}
+
+th,
+td,
+.text-p {
+    font-weight: 300;
 }
 
 .text-h3 i {
