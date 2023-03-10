@@ -78,89 +78,99 @@
                     </tr>
                 </tbody>
             </table>
-            <div>
-                <h3 class="text-h3"><i class="fa-solid fa-money-check-dollar"></i> Prices</h3>
-                <table class="table table-bordered table-responsive">
+        </div>
+        <div>
+            <h3 class="text-h3"><i class="fa-solid fa-money-check-dollar"></i> Prices</h3>
+            <table class="table table-bordered table-responsive">
+                <tr>
+                    <th scope="row">Children</th>
+                    <td>{{ resort.children_ski_pass_price| safe }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Adults</th>
+                    <td>{{ resort.adults_ski_pass_price| safe }}</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h3 class="text-h3"><i class="fa-solid fa-cable-car"></i> Lifts</h3>
+            <table class="table table-bordered">
+                <tbody>
                     <tr>
-                        <th scope="row">Children</th>
-                        <td>{{ resort.children_ski_pass_price| safe }}</td>
+                        <th scope="row">Gondola Lift</th>
+                        <td>
+                            {% if resort.gondola_lifts == True %}
+                            <i class="fa-solid fa-check"></i>
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            {{ resort.gondola_lifts }}
+                            {% endif %}
+                        </td>
                     </tr>
                     <tr>
-                        <th scope="row">Adults</th>
-                        <td>{{ resort.adults_ski_pass_price| safe }}</td>
+                        <th scope="row">Chair Lift</th>
+                        <td>
+                            {% if resort.chair_lifts == True %}
+                            <i class="fa-solid fa-check"></i>
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            {{ resort.chair_lifts }}
+                            {% endif %}
+                        </td>
                     </tr>
-                </table>
-            </div>
-            <div>
-                <h3 class="text-h3"><i class="fa-solid fa-cable-car"></i> Lifts</h3>
-                <table class="table table-bordered">
-                    <tbody>
-                        <tr>
-                            <th scope="row">Gondola Lift</th>
-                            <td>
-                                {% if resort.gondola_lifts == True %}
-                                <i class="fa-solid fa-check"></i>
-                                {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                                {{ resort.gondola_lifts }}
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Chair Lift</th>
-                            <td>
-                                {% if resort.chair_lifts == True %}
-                                <i class="fa-solid fa-check"></i>
-                                {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                                {{ resort.chair_lifts }}
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Button Lift</th>
-                            <td>
-                                {% if resort.button_lifts == True %}
-                                <i class="fa-solid fa-check"></i>
-                                {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                                {{ resort.button_lifts }}
-                                {% endif %}
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Moving Carpet</th>
-                            <td>
-                                {% if resort.moving_carpet_lifts == True %}
-                                <i class="fa-solid fa-check"></i>
-                                {% else %}
-                                <i class="fa-solid fa-xmark"></i>
-                                {{ resort.moving_carpet_lifts }}
-                                {% endif %}
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div>
-                <h3 class="text-h3"><i class="fa-solid fa-mountain-sun"></i> Slopes</h3>
-                <table class="table table-bordered">
-                    <tbody>
-                        <tr>
-                            <th scope="row">Number of Easy Slopes</th>
-                            <td>{{ resort.easy_slopes| safe }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Number of Intermediate Slopes</th>
-                            <td>{{ resort.intermediate_slopes| safe }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Number of Difficult Slopes</th>
-                            <td>{{ resort.difficult_slopes| safe }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    <tr>
+                        <th scope="row">Button Lift</th>
+                        <td>
+                            {% if resort.button_lifts == True %}
+                            <i class="fa-solid fa-check"></i>
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            {{ resort.button_lifts }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Moving Carpet</th>
+                        <td>
+                            {% if resort.moving_carpet_lifts == True %}
+                            <i class="fa-solid fa-check"></i>
+                            {% else %}
+                            <i class="fa-solid fa-xmark"></i>
+                            {{ resort.moving_carpet_lifts }}
+                            {% endif %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h3 class="text-h3"><i class="fa-solid fa-mountain-sun"></i> Slopes</h3>
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <th scope="row">Number of Easy Slopes</th>
+                        <td>{{ resort.easy_slopes| safe }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Number of Intermediate Slopes</th>
+                        <td>{{ resort.intermediate_slopes| safe }}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Number of Difficult Slopes</th>
+                        <td>{{ resort.difficult_slopes| safe }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card-body col-sm-6">
+            <h5 class="card-title">Rating</h5>
+            <p class="card-text"><i class="fa-regular fa-heart"></i>{{ rating.star_rating }}</p>
+        </div>
+        <div class="card-body col-sm-6">
+            <h5 class="card-title">Comments</h5>
+            <p class="card-text">This is a comment.</p>
         </div>
     </div>
 </div>
