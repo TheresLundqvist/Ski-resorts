@@ -29,7 +29,7 @@ class ResortDetail(View):
 
 class RatingDetail(View):
     def get(self, request, *args, **kwargs):
-        rating = Rating.number_of_stars
+        rating = Rating.objects
         return render(
             request,
             "resort_detail.html",

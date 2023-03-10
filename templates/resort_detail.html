@@ -164,12 +164,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="card-body col-sm-6">
-            <h5 class="card-title">Rating</h5>
-            <p class="text-p"><i class="fa-regular fa-heart"></i>{{ rating.star_rating }}</p>
+        <div class="card-body col-sm-4">
+            <span><i class="fa-regular fa-heart"></i></span>
+            <span class="text-p">Rating</span>
+            <span>{{ rating.rating }}</span>
         </div>
-        <div class="card-body col-sm-6">
-            <h5 class="card-title">Comments</h5>
+        <div class="card-body col-sm-4">
+            <span><i class="fa-regular fa-comment"></i></span>
+            <span class="text-p">Comments</span>
             {% for comment in comments %}
             <div class="comments" style="padding: 10px;">
                 <p class="font-weight-bold">
@@ -181,6 +183,10 @@
                 {{ comment.body | linebreaks }}
             </div>
             {% endfor %}
+        </div>
+        <div class="card-body col-sm-4">
+            <span><i class="fa-regular fa-share-from-square"></i></span>
+            <span class="text-p">Share</span>
         </div>
     </div>
 </div>
