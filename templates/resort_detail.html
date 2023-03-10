@@ -1,19 +1,25 @@
 {% extends 'base.html' %} {% block content %}
-{% if "placeholder" in resort.image.url %}
+
+
 <div class="card w-100 text-style" style="width: 18rem;">
+    {% if "placeholder" in resort.image.url %}
     <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" class="card-img-top"
         alt="ski resorts picture">
+    {% else %}
+    <img class="card-img-top" src=" {{ resort.image.url }}">
+    {% endif %}
     <div class="card-body">
         <h5 class="card-title resort">{{ resort.resort }}</h5>
         <p class="card-text">{{ resort.description | safe }}</p>
         <hr />
         <div>
-            <h3>Find us here <i class="fa-solid fa-map-pin"></i></h3>
+            <h3 class="text-h3"><i class="fa-solid fa-map-pin"></i> Find us here</h3>
             <p>{{ resort.location_address | safe }}</p>
             <p>{{ resort.country | safe }}</p>
         </div>
+        <hr />
         <div>
-            <h3>We are open <i class="fa-regular fa-clock"></i></h3>
+            <h3 class="text-h3"><i class="fa-solid fa-clock"></i> We are open</h3>
             <table class="table table-bordered">
                 <tbody>
                     <tr>
@@ -28,7 +34,7 @@
             </table>
         </div>
         <div>
-            <h3>We offer <i class="fa-solid fa-circle-info"></i></h3>
+            <h3 class="text-h3"><i class="fa-solid fa-circle-info"></i> We offer</h3>
             <table class="table table-bordered table-responsive">
                 <tbody>
                     <tr>
@@ -58,7 +64,7 @@
                         <td>
                             {% if resort.offers_accommodation == True %}
                             <i class="fa-solid fa-check"></i>
-                            {% elif resort.offers_accommodation == False %}
+                            {% else %}
                             <i class="fa-solid fa-xmark"></i>
                             {{ resort.offers_accommodation }}
                             {% endif %}
@@ -73,7 +79,7 @@
                 </tbody>
             </table>
             <div>
-                <h3>Prices <i class="fa-solid fa-hand-holding-dollar"></i></h3>
+                <h3 class="text-h3"><i class="fa-solid fa-money-check-dollar"></i> Prices</h3>
                 <table class="table table-bordered table-responsive">
                     <tr>
                         <th scope="row">Children</th>
@@ -86,38 +92,58 @@
                 </table>
             </div>
             <div>
-                <h3>Lifts <i class="fa-solid fa-cable-car"></i></h3>
+                <h3 class="text-h3"><i class="fa-solid fa-cable-car"></i> Lifts</h3>
                 <table class="table table-bordered">
                     <tbody>
                         <tr>
                             <th scope="row">Gondola Lift</th>
                             <td>
+                                {% if resort.gondola_lifts == True %}
+                                <i class="fa-solid fa-check"></i>
+                                {% else %}
+                                <i class="fa-solid fa-xmark"></i>
                                 {{ resort.gondola_lifts }}
+                                {% endif %}
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Chair Lift</th>
                             <td>
+                                {% if resort.chair_lifts == True %}
+                                <i class="fa-solid fa-check"></i>
+                                {% else %}
+                                <i class="fa-solid fa-xmark"></i>
                                 {{ resort.chair_lifts }}
+                                {% endif %}
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Button Lift</th>
                             <td>
+                                {% if resort.button_lifts == True %}
+                                <i class="fa-solid fa-check"></i>
+                                {% else %}
+                                <i class="fa-solid fa-xmark"></i>
                                 {{ resort.button_lifts }}
+                                {% endif %}
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">Moving Carpet</th>
                             <td>
+                                {% if resort.moving_carpet_lifts == True %}
+                                <i class="fa-solid fa-check"></i>
+                                {% else %}
+                                <i class="fa-solid fa-xmark"></i>
                                 {{ resort.moving_carpet_lifts }}
+                                {% endif %}
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <div>
-                <h3>Slopes <i class="fa-solid fa-mountain-sun"></i></h3>
+                <h3 class="text-h3"><i class="fa-solid fa-mountain-sun"></i> Slopes</h3>
                 <table class="table table-bordered">
                     <tbody>
                         <tr>
@@ -137,101 +163,5 @@
             </div>
         </div>
     </div>
-    <!-- <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" class="img-fluid">
-{% else %}
-<img src=" {{ resort.image.url }}" class="img-fluid">
-{% endif %}
-<div class="card-title">
-    <h1 class="resort">{{ resort.resort }}</h1>
-</div> -->
-
-
-    <!-- <div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left top">
-            <div class="card-body">
-                <p class="card-text ">
-                    {{ resort.description | safe }}
-                    <hr />
-                    <br>
-                    Find us here <i class="fa-solid fa-map-pin"></i>
-                    <br>
-                    {{ resort.location_address | safe }}
-                    {{ resort.country | safe }}
-                    <br>
-                    We are open <i class="fa-regular fa-clock"></i>
-                    <br>
-                    {{ resort.opening_season| safe }}
-                    {{ resort.hours| safe }}
-                    <br>
-                    We offer <i class="fa-solid fa-circle-info"></i>
-                    <br>
-                    {{ resort.has_ski_rentals| safe }}
-                    {{ resort.has_ski_lessons| safe }}
-                    {{ resort.offers_accommodation| safe }}
-                    {{ resort.restaurants| safe }}
-                    <br>
-                    Prices <i class="fa-solid fa-hand-holding-dollar"></i>
-                    <br>
-                    {{ resort.adults_ski_pass_price| safe }}
-                    {{ resort.children_ski_pass_price| safe }}
-                    <br>
-                    Lifts <i class="fa-solid fa-cable-car"></i>
-                    <br>
-                    {{ resort.gondola_lifts| safe }}
-                    {{ resort.chair_lifts| safe }}
-                    {{ resort.button_lifts| safe }}
-                    {{ resort.moving_carpet_lifts| safe }}
-                    <br>
-                    Slopes <i class="fa-solid fa-mountain-sun"></i>
-                    <br>
-                    {{ resort.easy_slopes| safe }}
-                    {{ resort.intermediate_slopes| safe }}
-                    {{ resort.difficult_slopes| safe }}
-                </p>
-                <div class="row">
-
-                    <div class="col-1">
-                        <strong class="text-secondary"><i class="far fa-heart"></i> {{ rating.star_rating }}
-                        </strong>
-                    </div>
-                    <div class="col-1">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
-            <div class="card-body">
-                {% for comment in comments %}
-                <div class="comments" style="padding: 10px;">
-                    <p class="font-weight-bold">
-                        {{ comment.name }}
-                        <span class=" text-muted font-weight-normal">
-                            {{ comment.created_on }}
-                        </span> wrote:
-                    </p>
-                    {{ comment.body | linebreaks }}
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body">
-            </div>
-        </div>
-    </div>
-</div> -->
-
-    {% endblock content %}
+</div>
+{% endblock content %}
