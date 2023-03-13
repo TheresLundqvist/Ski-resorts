@@ -39,36 +39,27 @@
                 <tbody>
                     <tr>
                         <th scope="row">Ski Rentals</th>
-                        <td>
-                            {% if resort.has_ski_rentals == True %}
-                            <i class="fa-solid fa-check"></i>
-                            {% elif resort.has_ski_rentals == False %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {{ resort.has_ski_rentals }}
+                            {% if resort.has_ski_rentals %}
+                            <td><i class="fa-solid fa-check"></i></td>
+                            {% else %}
+                            <td><i class="fa-solid fa-xmark"></i></td>
                             {% endif %}
-                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Ski Lessons</th>
-                        <td>
-                            {% if resort.has_ski_lessons == True %}
-                            <i class="fa-solid fa-check"></i>
-                            {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {{ resort.has_ski_lessons }}
-                            {% endif %}
-                        </td>
+                        {% if resort.has_ski_lessons %}
+                        <td><i class="fa-solid fa-check"></i></td>
+                        {% else %}
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                        {% endif %}
                     </tr>
                     <tr>
                         <th scope="row">Accommodation</th>
-                        <td>
-                            {% if resort.offers_accommodation == True %}
-                            <i class="fa-solid fa-check"></i>
+                            {% if resort.offers_accommodation %}
+                            <td><i class="fa-solid fa-check"></i></td>
                             {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {{ resort.offers_accommodation }}
+                            <td><i class="fa-solid fa-xmark"></i></td>
                             {% endif %}
-                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Restaurants</th>
@@ -98,47 +89,35 @@
                 <tbody>
                     <tr>
                         <th scope="row">Gondola Lift</th>
-                        <td>
-                            {% if resort.gondola_lifts == True %}
-                            <i class="fa-solid fa-check"></i>
+                            {% if resort.gondola_lifts %}
+                            <td><i class="fa-solid fa-check"></i></td>
                             {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {{ resort.gondola_lifts }}
+                            <td><i class="fa-solid fa-xmark"></i></td>
                             {% endif %}
-                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Chair Lift</th>
-                        <td>
-                            {% if resort.chair_lifts == True %}
-                            <i class="fa-solid fa-check"></i>
+                            {% if resort.chair_lifts %}
+                            <td><i class="fa-solid fa-check"></i></td>
                             {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {{ resort.chair_lifts }}
+                            <td><i class="fa-solid fa-xmark"></i></td>
                             {% endif %}
-                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Button Lift</th>
-                        <td>
-                            {% if resort.button_lifts == True %}
-                            <i class="fa-solid fa-check"></i>
+                            {% if resort.button_lifts %}
+                            <td><i class="fa-solid fa-check"></i></td>
                             {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {{ resort.button_lifts }}
+                            <td><i class="fa-solid fa-xmark"></i></td>
                             {% endif %}
-                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Moving Carpet</th>
-                        <td>
-                            {% if resort.moving_carpet_lifts == True %}
-                            <i class="fa-solid fa-check"></i>
+                            {% if resort.moving_carpet_lifts %}
+                            <td><i class="fa-solid fa-check"></i></td>
                             {% else %}
-                            <i class="fa-solid fa-xmark"></i>
-                            {{ resort.moving_carpet_lifts }}
+                            <td><i class="fa-solid fa-xmark"></i></td>
                             {% endif %}
-                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -167,7 +146,7 @@
         <div class="card-body col-sm-4">
             <span><i class="fa-regular fa-heart"></i></span>
             <span class="text-p">Rating</span>
-            <span>{{ rating.rating }}</span>
+            <span>{{ rating }}</span>
         </div>
         <div class="card-body col-sm-4">
             <span><i class="fa-regular fa-comment"></i></span>
