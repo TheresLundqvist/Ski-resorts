@@ -25,15 +25,3 @@ class ResortDetail(View):
                 "comments": comments
             },
         )
-
-
-class RatingDetail(View):
-    def get(self, request, *args, **kwargs):
-        rating = Rating.objects
-        return render(
-            request,
-            "resort_detail.html",
-            {
-                "rating": rating
-            },
-        )
