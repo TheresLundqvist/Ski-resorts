@@ -7,7 +7,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class ResortAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('resort',)}
     search_fields = ['resort', 'name', 'country', 'user_name']
-    list_display = ('resort', 'country', 'status')
+    list_display = ('resort', 'country', 'status', 'average_rating')
     list_filter = ('status',)
     summernote_fields = ('description')
 

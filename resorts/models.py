@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django_countries.fields import CountryField
+from django.db.models import Avg
 
 STATUS = ((0, 'Draft'), (1, 'Published'))
 
@@ -33,6 +34,9 @@ class Resort(models.Model):
     def __str__(self):
         return self.resort
 
+    def average_rating(self) -> float:
+        return Rating.objects.filter(resort=self).aggregate(Avg("star_rating"))["star_rating__avg"] or 0  # noqa
+
 
 class Contact(models.Model):
     name = models.CharField(max_length=200, null=False, blank=False)
@@ -43,10 +47,10 @@ class Contact(models.Model):
 class Rating(models.Model):
     resort = models.ForeignKey(Resort, on_delete=models.CASCADE, null=False, blank=False)  # noqa
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)  # noqa
-    star_rating = models.ManyToManyField(User, blank=True, related_name='resort_rating')  # noqa
+    star_rating = models.IntegerField(User, default=0)  # noqa
 
-    def number_of_stars(self):
-        return self.rating.count()
+    def __str__(self):
+        return f"{self.resort}: {self.rating}"
 
 
 class Comment(models.Model):
