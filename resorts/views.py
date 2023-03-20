@@ -15,7 +15,7 @@ class ResortDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Resort.objects.filter(status=1)
         resort = get_object_or_404(queryset, slug=slug)
-        comments = resort.comments.filter(approved=True).order_by("-created_on")  # noqa
+        comments = resort.comments.filter(approved=True).order_by("created_on")  # noqa
         rating = resort.average_rating
 
         return render(
