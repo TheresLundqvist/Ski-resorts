@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
+{% load crispy_forms_tags %}
+
 
 <div class="card w-100 text-style" style="width: 18rem;">
     {% if "placeholder" in resort.image.url %}
@@ -39,11 +41,11 @@
                 <tbody>
                     <tr>
                         <th scope="row">Ski Rentals</th>
-                            {% if resort.has_ski_rentals %}
-                            <td><i class="fa-solid fa-check"></i></td>
-                            {% else %}
-                            <td><i class="fa-solid fa-xmark"></i></td>
-                            {% endif %}
+                        {% if resort.has_ski_rentals %}
+                        <td><i class="fa-solid fa-check"></i></td>
+                        {% else %}
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                        {% endif %}
                     </tr>
                     <tr>
                         <th scope="row">Ski Lessons</th>
@@ -55,11 +57,11 @@
                     </tr>
                     <tr>
                         <th scope="row">Accommodation</th>
-                            {% if resort.offers_accommodation %}
-                            <td><i class="fa-solid fa-check"></i></td>
-                            {% else %}
-                            <td><i class="fa-solid fa-xmark"></i></td>
-                            {% endif %}
+                        {% if resort.offers_accommodation %}
+                        <td><i class="fa-solid fa-check"></i></td>
+                        {% else %}
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                        {% endif %}
                     </tr>
                     <tr>
                         <th scope="row">Restaurants</th>
@@ -89,35 +91,35 @@
                 <tbody>
                     <tr>
                         <th scope="row">Gondola Lift</th>
-                            {% if resort.gondola_lifts %}
-                            <td><i class="fa-solid fa-check"></i></td>
-                            {% else %}
-                            <td><i class="fa-solid fa-xmark"></i></td>
-                            {% endif %}
+                        {% if resort.gondola_lifts %}
+                        <td><i class="fa-solid fa-check"></i></td>
+                        {% else %}
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                        {% endif %}
                     </tr>
                     <tr>
                         <th scope="row">Chair Lift</th>
-                            {% if resort.chair_lifts %}
-                            <td><i class="fa-solid fa-check"></i></td>
-                            {% else %}
-                            <td><i class="fa-solid fa-xmark"></i></td>
-                            {% endif %}
+                        {% if resort.chair_lifts %}
+                        <td><i class="fa-solid fa-check"></i></td>
+                        {% else %}
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                        {% endif %}
                     </tr>
                     <tr>
                         <th scope="row">Button Lift</th>
-                            {% if resort.button_lifts %}
-                            <td><i class="fa-solid fa-check"></i></td>
-                            {% else %}
-                            <td><i class="fa-solid fa-xmark"></i></td>
-                            {% endif %}
+                        {% if resort.button_lifts %}
+                        <td><i class="fa-solid fa-check"></i></td>
+                        {% else %}
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                        {% endif %}
                     </tr>
                     <tr>
                         <th scope="row">Moving Carpet</th>
-                            {% if resort.moving_carpet_lifts %}
-                            <td><i class="fa-solid fa-check"></i></td>
-                            {% else %}
-                            <td><i class="fa-solid fa-xmark"></i></td>
-                            {% endif %}
+                        {% if resort.moving_carpet_lifts %}
+                        <td><i class="fa-solid fa-check"></i></td>
+                        {% else %}
+                        <td><i class="fa-solid fa-xmark"></i></td>
+                        {% endif %}
                     </tr>
                 </tbody>
             </table>
@@ -161,12 +163,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3">
+        <div class="col-md-8 card mb-4 mt-3">
             <h3 class="text-h3 pt-2 px-2">Comments:</h3>
             <div class="card-body">
                 {% for comment in comments %}
@@ -184,7 +181,22 @@
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- For later -->
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
+                {% else %}
+                {% if user.is_authenticated %}
+
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
