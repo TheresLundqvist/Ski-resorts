@@ -202,6 +202,34 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Login page */
+
+.login {
+    font-family: Josefin Sans, sans-serif;
+}
+
+.sign-in {
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 1.5em;
+    color: #E84610;
+}
+
+.sign-up,
+.forgot {
+    color: #E84610;
+}
+
+.btn-sign-in {
+    font-size: 1em;
+    background-color: #E84610;
+    color: #eee;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: Josefin Sans, sans-serif;
+}
+
+
 /* Media Queries */
 
 /* For media screens from 350px */
