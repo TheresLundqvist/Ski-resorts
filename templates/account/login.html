@@ -7,11 +7,11 @@
 
 {% block content %}
 
-<div class="container login">
+<div class="container main-text">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
 
-      <h1 class="sign-in">{% trans "Sign In" %} <i class="fa-solid fa-angles-right"></i></h1>
+      <h1 class="account-h1">{% trans "Sign In" %} <i class="fa-solid fa-angles-right"></i></h1>
 
       <p>
         {% blocktrans %} Welcome back to Ski Resorts. To give resort rating or to leave a comment, 
@@ -29,7 +29,7 @@
         {% endif %}
         <a class="button secondaryAction forgot" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
         <br>
-        <button class="btn btn-sign-in mt-2" type="submit">{% trans "Sign In" %}</button>
+        <button class="btn btn-sign mt-2" type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
   </div>
