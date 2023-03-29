@@ -164,6 +164,15 @@ td,
     padding-right: 10px;
 }
 
+.fa-star {
+    color: rgb(224, 193, 19);
+}
+
+.fa-comment,
+.fa-share-from-square {
+    color: #E84610;
+}
+
 /* footer */
 footer {
     background-color: #fff;
@@ -229,6 +238,21 @@ footer {
     font-family: Josefin Sans, sans-serif;
 }
 
+.btn-sign:hover {
+    background-color: #112B3C;
+    color: #eee;
+}
+
+/* Comments */
+
+.comment {
+    margin-bottom: 0;
+}
+
+.comment i {
+    color: #E84610;
+    margin-left: 5px;
+}
 
 /* Media Queries */
 
