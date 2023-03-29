@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 
-<div class="card w-100 text-style" style="width: 18rem;">
+<div class="card w-100 text-style">
     {% if "placeholder" in resort.image.url %}
     <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" class="card-img-top"
         alt="ski resorts picture">
@@ -144,61 +144,68 @@
             </table>
         </div>
     </div>
-    <div class="row">
-        <div class="card-body col-sm-4">
-            <span>{{ rating }}</span>
-            <span class="text-p">Rating</span>
+    <div class="row row-cols-3 text-center">
+        <div class="card-body">
+            <span class="text-uppercase">Rating</span><br>
             <span><i class="fa-solid fa-star"></i></span>
+            <span>{{ rating }}</span>
         </div>
-        <div class="card-body col-sm-4">
+        <div class="card-body">
             {% with comments.count as total_comments %}
-            <span>{{ total_comments }}</span>
-            <span class="text-p">Comments</span>
+            <span class="text-uppercase">Comments</span><br>
             <span><i class="fa-solid fa-comment"></i></span>
+            <span>{{ total_comments }}</span>
             {% endwith %}
         </div>
-        <div class="card-body col-sm-4">
-            <span class="text-p">Share</span>
+        <div class="card-body">
+            <span class="text-uppercase">Share</span><br>
             <span><i class="fa-regular fa-share-from-square"></i></span>
         </div>
     </div>
-</div>
-<div class="card w-100">
-    <h3 class="text-h3 pt-2 px-2"><i class="fa-solid fa-comments"></i> Comments</h3>
-    <div class="card-body">
-        {% for comment in comments %}
-        <div class="comments" style="padding: 10px;">
-            <p class="font-weight-bold">
-                {{ comment.name }}
-                <span class=" text-muted font-weight-normal">
-                    {{ comment.created_on }}
-                </span> wrote:
-            </p>
-            {{ comment.body | linebreaks }}
+    <div class="row">
+        <div class="col">
+            <hr>
         </div>
-        {% endfor %}
     </div>
-</div>
-<div class="card w-100 mb-1 mt-1">
-    <div class="card-body">
-        {% if commented %}
-        <div class="alert alert-success" role="alert">
-            Your comment is awaiting approval
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card-body">
+                <h3 class="text-h3"><i class="fa-solid fa-comments"></i> Comments</h3>
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    {{ comment.body | linebreaks }}
+                </div>
+                {% endfor %}
+            </div>
         </div>
-        {% else %}
-        {% if user.is_authenticated %}
+        <div class="col-sm-4">
+            <div class="card-body col-sm-6">
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
+                {% else %}
+                {% if user.is_authenticated %}
 
-        <h3 class="text-h3 comment">Leave a comment<i class="fa-solid fa-comment-dots"></i></h3>
-        <p class="text-p">
-            You are posting as: {{ user.username }}
-        </p>
-        <form method="post" style="margin-top: 1.3em;">
-            {{ comment_form | crispy }}
-            {% csrf_token %}
-            <button type="submit" class="btn btn-sign">Submit</button>
-        </form>
-        {% endif %}
-        {% endif %}
+                <h3 class="text-h3 comment">Leave a comment<i class="fa-solid fa-comment-dots"></i></h3>
+                <p class="text-p">
+                    You are posting as: {{ user.username }}
+                </p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-sign">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
     </div>
 </div>
 {% endblock content %}

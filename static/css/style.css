@@ -173,6 +173,10 @@ td,
     color: #E84610;
 }
 
+.text-uppercase {
+    font-size: 0.7em;
+}
+
 /* footer */
 footer {
     background-color: #fff;
