@@ -28,10 +28,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = ['ski-resorts-locator.herokuapp.com', 'localhost']
-
+ALLOWED_HOSTS = []
+host = os.environ.get('SITE_NAME')
+if host:
+    ALLOWED_HOSTS.append(host)
 
 # Application definition
 
@@ -43,13 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.sites',
     'cloudinary_storage',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
     'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django_countries',
     'resorts',
 ]
