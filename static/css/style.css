@@ -258,6 +258,21 @@ footer {
     margin-left: 5px;
 }
 
+.comment-body {
+    font-weight: 300;
+}
+
+.commenter {
+    margin-bottom: 0;
+}
+
+.comment-date {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: grey;
+}
+
 /* Media Queries */
 
 /* For media screens from 350px */
