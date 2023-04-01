@@ -200,7 +200,7 @@ td,
     color: #eee;
     text-transform: uppercase;
     font-style: italic;
-    padding-top: 8px;
+    padding-top: 13px;
     padding-left: 10px;
 }
 
@@ -318,6 +318,7 @@ footer {
     .resort-name {
         width: 50vw;
         left: 1%;
+        padding-top: 8px;
     }
 }
 
