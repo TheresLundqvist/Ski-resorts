@@ -55,10 +55,10 @@
         <div class="col-md-4">
           <div class="card mb-4">
             <div class="card">
-              {% if "placeholder" in resort.image.url %}
+              {% if "placeholder" in resort.main_image.url %}
               <img class="card-img-top" {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" />
               {% else %}
-              <img class="card-img-top" src=" {{ resort.image.url }}">
+              <img class="card-img-top" src=" {{ resort.main_image.url }}">
               {% endif %}
               <div class="card-body">
                 <h5 class="card-title resort">{{ resort.resort }}</h5>

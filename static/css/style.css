@@ -173,8 +173,35 @@ td,
     color: #E84610;
 }
 
-.text-uppercase {
+.about {
     font-size: 0.7em;
+}
+
+.contact-resort {
+    text-decoration: none;
+    color: #E84610;
+}
+
+.q-area {
+    background-color: #112B3C;
+}
+
+.main-img {
+    position: relative;
+}
+
+.resort-name {
+    position: absolute;
+    top: 1%;
+    left: 1.5%;
+    height: 6vh;
+    width: 65vw;
+    background-color: #112B3C;
+    color: #eee;
+    text-transform: uppercase;
+    font-style: italic;
+    padding-top: 8px;
+    padding-left: 10px;
 }
 
 /* footer */
@@ -286,6 +313,15 @@ footer {
     }
 }
 
+/* For media screens from 500px and up */
+@media screen and (min-width: 500px) {
+    .resort-name {
+        width: 50vw;
+        left: 1%;
+    }
+}
+
+
 /* For media screens from 600px and up */
 @media screen and (min-width: 600px) {
     .img-intro {
@@ -302,6 +338,10 @@ footer {
         left: 1%;
         height: 42%;
         width: 60%;
+    }
+
+    .resort-name {
+        width: 40vw;
     }
 }
 
@@ -323,6 +363,17 @@ footer {
 
     .intro-exp {
         font-size: 1em;
+    }
+
+    .resort-h5 {
+        font-size: 1.75rem;
+    }
+
+    .resort-name {
+        width: 45vw;
+        height: 10vh;
+        padding-top: 15px;
+        left: 0.5%;
     }
 }
 
@@ -347,6 +398,15 @@ footer {
     .navbar-brand {
         margin-right: 50px;
     }
+
+    .resort-h5 {
+        font-size: 2rem;
+    }
+
+    .resort-name {
+        width: 40vw;
+        top: 3%;
+    }
 }
 
 /* For media screens from 1200px and up */
@@ -355,5 +415,10 @@ footer {
         width: 47%;
         height: 22%;
         top: 15%;
+    }
+
+    .resort-name {
+        left: 0.3%;
+        width: 30vw;
     }
 }

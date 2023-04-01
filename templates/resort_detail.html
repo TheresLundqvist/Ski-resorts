@@ -4,14 +4,16 @@
 
 
 <div class="card w-100 text-style">
-    {% if "placeholder" in resort.image.url %}
-    <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" class="card-img-top"
-        alt="ski resorts picture">
+    {% if "placeholder" in resort.main_image.url %}
+    <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" class="img-thumbnail main-img"
+     alt="ski resorts picture">
     {% else %}
-    <img class="card-img-top" src=" {{ resort.image.url }}">
+    <img class="img-thumbnail main-img" src=" {{ resort.main_image.url }}">
     {% endif %}
+    <div class="resort-name">
+        <h5 class="resort-h5"> {{ resort.resort }}</h5>
+    </div>
     <div class="card-body">
-        <h5 class="card-title resort">{{ resort.resort }}</h5>
         <p class="text-p">{{ resort.description | safe }}</p>
         <hr />
         <div>
@@ -19,7 +21,29 @@
             <p class="text-p">{{ resort.location_address | safe }}</p>
             <p class="text-p">{{ resort.country | safe }}</p>
         </div>
-        <hr />
+        <div class="row mb-4">
+            <div class="col col-12 col-md-4 my-1 my-md-0">
+                {% if "placeholder" in resort.image_one.url %}
+                <img class="img-fluid img-thumbnail" {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" />
+                {% else %}
+                <img class="img-fluid img-thumbnail" src=" {{ resort.image_one.url }}">
+                {% endif %}
+            </div>
+            <div class="col col-12 col-md-4 my-1 my-md-0">
+                {% if "placeholder" in resort.image_two.url %}
+                <img class="img-fluid img-thumbnail" {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" />
+                {% else %}
+                <img class="card-img-top" src=" {{ resort.image_two.url }}">
+                {% endif %}
+            </div>
+            <div class="col col-12 col-md-4 my-1 my-md-0">
+                {% if "placeholder" in resort.image_three.url %}
+                <img class="img-fluid img-thumbnail" {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" />
+                {% else %}
+                <img class="img-fluid img-thumbnail" src=" {{ resort.image_three.url }}">
+                {% endif %}
+            </div>
+        </div>
         <div>
             <h3 class="text-h3"><i class="fa-solid fa-clock"></i> We are open</h3>
             <table class="table table-bordered">
@@ -146,19 +170,19 @@
     </div>
     <div class="row row-cols-3 text-center">
         <div class="card-body">
-            <span class="text-uppercase">Rating</span><br>
+            <span class="text-uppercase about">Rating</span><br>
             <span><i class="fa-solid fa-star"></i></span>
             <span>{{ resort.average_rating }}</span>
         </div>
         <div class="card-body">
             {% with comments.count as total_comments %}
-            <span class="text-uppercase">Comments</span><br>
+            <span class="text-uppercase about">Comments</span><br>
             <span><i class="fa-solid fa-comment"></i></span>
             <span>{{ total_comments }}</span>
             {% endwith %}
         </div>
         <div class="card-body">
-            <span class="text-uppercase">Share</span><br>
+            <span class="text-uppercase about">Share</span><br>
             <span><i class="fa-regular fa-share-from-square"></i></span>
         </div>
     </div>
@@ -207,6 +231,12 @@
                 {% endif %}
                 {% endif %}
             </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 text-center q-area">
+        <div class="card-body">
+            <h3 class="text-uppercase text-h3 text-white">Questions?</h3>
+            <a href="" class="contact-resort">Contact this resort here</a>
         </div>
     </div>
 </div>

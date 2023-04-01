@@ -8,12 +8,15 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 class Resort(models.Model):
-    image = CloudinaryField("image", default="placeholder")
+    main_image = CloudinaryField("main image", default="placeholder")
     resort = models.CharField(max_length=200, null=False, blank=False)
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=False)  # noqa
     description = models.TextField(null=False, blank=False)
     location_address = models.CharField(max_length=200, null=False, blank=False)  # noqa
     country = CountryField(blank_label="(select country)", default=True, max_length=80)  # noqa
+    image_one = CloudinaryField("image one", default="placeholder")
+    image_two = CloudinaryField("image two", default="placeholder")
+    image_three = CloudinaryField("image three", default="placeholder")
     hours = models.CharField(max_length=200, null=False, blank=False)
     opening_season = models.CharField(max_length=300, null=False, blank=False)  # noqa
     has_ski_rentals = models.BooleanField(default=True, null=False, blank=False)  # noqa
@@ -39,6 +42,7 @@ class Resort(models.Model):
 
 
 class Contact(models.Model):
+    resort = models.ForeignKey(Resort, on_delete=models.CASCADE, null=True, blank=False)  # noqa
     name = models.CharField(max_length=200, null=False, blank=False)
     email = models.EmailField(null=False, blank=False)
     phone = models.IntegerField(null=False, blank=False)
