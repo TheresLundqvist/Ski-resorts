@@ -11,7 +11,7 @@ body {
 }
 
 .navbar-brand {
-    font-family: Josefin Sans, Sans-serif;
+    font-family: Century Gotic, Sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     font-style: italic;
@@ -53,10 +53,11 @@ body {
 }
 
 /* Background image */
-.carousel-inner > .item {
+.carousel-inner>.item {
     position: relative;
     max-height: 600px;
 }
+
 .carousel-caption {
     background-color: #ffffff6e;
     position: absolute;
@@ -100,7 +101,7 @@ body {
 }
 
 #view-all:hover {
-    color:#112B3C;
+    color: #112B3C;
     border-bottom: 1px solid #112B3C;
 }
 
@@ -144,6 +145,7 @@ body {
 }
 
 /* Resort_detail */
+
 .text-style {
     font-family: Josefin Sans, sans-serif;
 }
@@ -157,6 +159,7 @@ th,
 td,
 .text-p {
     font-weight: 300;
+    font-family: Josefin Sans, sans-serif;
 }
 
 .text-h3 i {
@@ -195,13 +198,31 @@ td,
     top: 1%;
     left: 1.5%;
     height: 6vh;
-    width: 65vw;
     background-color: #112B3C;
     color: #eee;
     text-transform: uppercase;
     font-style: italic;
     padding-top: 13px;
     padding-left: 10px;
+    padding-right: 10px;
+}
+
+.country-h5 {
+    text-transform: uppercase;
+    font-style: italic;
+    position: absolute;
+    top: 2.8%;
+    left: 1.3%;
+    height: 6vh;
+    background-color: #eee;
+    color: #112B3C;
+    padding-top: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.country-h5 i {
+    color: #E84610;
 }
 
 /* footer */
@@ -316,9 +337,14 @@ footer {
 /* For media screens from 500px and up */
 @media screen and (min-width: 500px) {
     .resort-name {
-        width: 50vw;
         left: 1%;
         padding-top: 8px;
+    }
+
+    .country-h5 {
+        top: 2.5%;
+        padding-top: 5px;
+        height: 5vh;
     }
 }
 
@@ -340,17 +366,13 @@ footer {
         height: 42%;
         width: 60%;
     }
-
-    .resort-name {
-        width: 40vw;
-    }
 }
 
 /* For media screens from 750px and up */
 @media screen and (min-width: 750px) {
     .card-img-top {
-    height: 15rem;
-    object-fit: cover;
+        height: 15rem;
+        object-fit: cover;
     }
 
     .carousel-caption {
@@ -371,10 +393,16 @@ footer {
     }
 
     .resort-name {
-        width: 45vw;
         height: 10vh;
         padding-top: 15px;
         left: 0.5%;
+    }
+
+    .country-h5 {
+        top: 3.2%;
+        height: 6vh;
+        padding-top: 6px;
+        left: 0.6%;
     }
 }
 
@@ -405,8 +433,12 @@ footer {
     }
 
     .resort-name {
-        width: 40vw;
         top: 3%;
+    }
+
+    .country-h5 {
+        top: 5%;
+        left: 0.5%;
     }
 }
 
@@ -419,7 +451,11 @@ footer {
     }
 
     .resort-name {
-        left: 0.3%;
-        width: 30vw;
+        left: 0.4%;
+    }
+
+    .country-h5 {
+        top: 4.8%;
+        left: 0.35%;
     }
 }

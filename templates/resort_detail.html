@@ -6,44 +6,62 @@
 <div class="card w-100 text-style">
     {% if "placeholder" in resort.main_image.url %}
     <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" class="img-thumbnail main-img"
-     alt="ski resorts picture">
+        alt="ski resorts picture">
     {% else %}
     <img class="img-thumbnail main-img" src=" {{ resort.main_image.url }}">
     {% endif %}
     <div class="resort-name">
         <h5 class="resort-h5"> {{ resort.resort }}</h5>
     </div>
+    <div class="resort-country">
+        <h5 class="country-h5">{{ resort.country.name }} <i class="fa-solid fa-map-pin"></i></h5>
+    </div>
     <div class="card-body">
-        <p class="text-p">{{ resort.description | safe }}</p>
+        <p class="text-p" style="font-family: Josefin Sans, sans-serif;">{{ resort.description | safe }}</p>
         <hr />
         <div>
             <h3 class="text-h3"><i class="fa-solid fa-map-pin"></i> Find us here</h3>
             <p class="text-p">{{ resort.location_address | safe }}</p>
-            <p class="text-p">{{ resort.country | safe }}</p>
         </div>
-        <div class="row mb-4">
-            <div class="col col-12 col-md-4 my-1 my-md-0">
+        <hr />
+        <div id="carouselExampleIndicators" class="carousel slide mb-4">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
                 {% if "placeholder" in resort.image_one.url %}
-                <img class="img-fluid img-thumbnail" {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" />
+                <img {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" class="d-block w-100" alt="...">
                 {% else %}
-                <img class="img-fluid img-thumbnail" src=" {{ resort.image_one.url }}">
+                <img {% load static %} src="{{ resort.image_one.url }}" class="d-block w-100" alt="...">
                 {% endif %}
-            </div>
-            <div class="col col-12 col-md-4 my-1 my-md-0">
-                {% if "placeholder" in resort.image_two.url %}
-                <img class="img-fluid img-thumbnail" {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" />
+              </div>
+              <div class="carousel-item">
+                {% if "placeholder" in resort.image_one.url %}
+                <img {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" class="d-block w-100" alt="...">
                 {% else %}
-                <img class="card-img-top" src=" {{ resort.image_two.url }}">
+                <img {% load static %} src="{{ resort.image_two.url }}" class="d-block w-100" alt="...">
                 {% endif %}
-            </div>
-            <div class="col col-12 col-md-4 my-1 my-md-0">
-                {% if "placeholder" in resort.image_three.url %}
-                <img class="img-fluid img-thumbnail" {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" />
+              </div>
+              <div class="carousel-item">
+                {% if "placeholder" in resort.image_one.url %}
+                <img {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" class="d-block w-100" alt="...">
                 {% else %}
-                <img class="img-fluid img-thumbnail" src=" {{ resort.image_three.url }}">
+                <img {% load static %} src="{{ resort.image_three.url }}" class="d-block w-100" alt="...">
                 {% endif %}
+              </div>
             </div>
-        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         <div>
             <h3 class="text-h3"><i class="fa-solid fa-clock"></i> We are open</h3>
             <table class="table table-bordered">
@@ -168,6 +186,7 @@
             </table>
         </div>
     </div>
+    <hr />
     <div class="row row-cols-3 text-center">
         <div class="card-body">
             <span class="text-uppercase about">Rating</span><br>

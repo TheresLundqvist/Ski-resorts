@@ -62,7 +62,7 @@
               {% endif %}
               <div class="card-body">
                 <h5 class="card-title resort">{{ resort.resort }}</h5>
-                <p class="card-text resort-text">{{ resort.description|safe|truncatewords:50 }}</p>
+                <p class="card-text resort-text">{{ resort.description|safe|truncatewords:60 }}</p>
                 <a href="{% url 'resort_detail' resort.slug %}" class="btn btn-org">Read More</a>
                 <hr />
                 <p class="card-text text-muted h6"><i class="fa-solid fa-star"></i>
