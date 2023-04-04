@@ -2,10 +2,11 @@
 
 {% load crispy_forms_tags %}
 
+{% load static %}
 
 <div class="card w-100 text-style">
     {% if "placeholder" in resort.main_image.url %}
-    <img {% load static %} src="{% static '/media/resort-placeholder.jpeg' %}" class="img-thumbnail main-img"
+    <img src="{% static 'images/resort-placeholder.jpeg' %}" class="img-thumbnail main-img"
         alt="ski resorts picture">
     {% else %}
     <img class="img-thumbnail main-img" src=" {{ resort.main_image.url }}">
@@ -33,23 +34,23 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 {% if "placeholder" in resort.image_one.url %}
-                <img {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" class="d-block w-100" alt="...">
+                <img src="{% static 'images/resort-placeholder.jpeg' %}" class="d-block w-100" alt="...">
                 {% else %}
-                <img {% load static %} src="{{ resort.image_one.url }}" class="d-block w-100" alt="...">
+                <img src="{{ resort.image_one.url }}" class="d-block w-100" alt="...">
                 {% endif %}
               </div>
               <div class="carousel-item">
                 {% if "placeholder" in resort.image_one.url %}
-                <img {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" class="d-block w-100" alt="...">
+                <img src="{% static 'images/resort-placeholder.jpeg' %}" class="d-block w-100" alt="...">
                 {% else %}
-                <img {% load static %} src="{{ resort.image_two.url }}" class="d-block w-100" alt="...">
+                <img src="{{ resort.image_two.url }}" class="d-block w-100" alt="...">
                 {% endif %}
               </div>
               <div class="carousel-item">
                 {% if "placeholder" in resort.image_one.url %}
-                <img {% load static %} src="{% static 'media/resort-placeholder.jpeg' %}" class="d-block w-100" alt="...">
+                <img src="{% static 'images/resort-placeholder.jpeg' %}" class="d-block w-100" alt="...">
                 {% else %}
-                <img {% load static %} src="{{ resort.image_three.url }}" class="d-block w-100" alt="...">
+                <img src="{{ resort.image_three.url }}" class="d-block w-100" alt="...">
                 {% endif %}
               </div>
             </div>

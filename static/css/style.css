@@ -18,7 +18,6 @@ body {
 }
 
 .navbar-brand {
-    font-family: Century Gotic, Sans-serif;
     text-transform: uppercase;
     font-weight: 500;
     font-style: italic;
@@ -28,7 +27,6 @@ body {
 }
 
 .navbar-nav {
-    font-family: Josefin Sans, sans-serif;
     margin-left: 10px;
 }
 
@@ -59,6 +57,14 @@ body {
     color: #112B3C;
 }
 
+.messages {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    width: 30%;
+    height: 10%;
+}
+
 /* Background image */
 .carousel-inner>.item {
     position: relative;
@@ -83,7 +89,6 @@ body {
     color: #E84610;
     font-size: 1em;
     font-weight: 700;
-    font-family: Josefin Sans, sans-serif;
     text-transform: uppercase;
 }
 
@@ -102,7 +107,6 @@ body {
     font-size: 0.8em;
     font-style: italic;
     font-weight: 500;
-    font-family: josefin sans, sans-serif;
     padding: 10px;
     text-transform: uppercase;
 }
@@ -119,13 +123,11 @@ body {
     margin: 4px;
     text-transform: uppercase;
     text-decoration: none;
-    font-family: Josefin Sans, sans-serif;
 }
 
 .resort-text {
     color: #112B3C;
     text-decoration: none;
-    font-family: Josefin Sans, sans-serif;
 }
 
 .btn-org {
@@ -134,7 +136,6 @@ body {
     color: #eee;
     text-transform: uppercase;
     font-style: italic;
-    font-family: Josefin Sans, sans-serif;
 }
 
 .btn-org:hover {
@@ -153,10 +154,6 @@ body {
 
 /* Resort_detail */
 
-.text-style {
-    font-family: Josefin Sans, sans-serif;
-}
-
 .text-h3 {
     text-transform: uppercase;
     font-size: 1em;
@@ -166,7 +163,6 @@ th,
 td,
 .text-p {
     font-weight: 300;
-    font-family: Josefin Sans, sans-serif;
 }
 
 .text-h3 i {
@@ -245,7 +241,6 @@ footer {
 
 .follow {
     color: #5d646b;
-    font-family: Josefin Sans, Sans-serif;
     font-weight: 500;
     font-style: italic;
     text-transform: uppercase;
@@ -272,10 +267,6 @@ footer {
 
 /* Login page */
 
-.main-text {
-    font-family: Josefin Sans, sans-serif;
-}
-
 .heading {
     text-transform: uppercase;
     font-style: italic;
@@ -294,7 +285,6 @@ footer {
     color: #eee;
     text-transform: uppercase;
     font-style: italic;
-    font-family: Josefin Sans, sans-serif;
 }
 
 .btn-sign:hover {
