@@ -14,7 +14,7 @@ class ResortAdmin(SummernoteModelAdmin):
 
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name', 'email', 'phone')
+    list_display = ('name', 'email', 'phone', 'subject')
 
 
 @admin.register(Rating)

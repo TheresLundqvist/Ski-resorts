@@ -1,4 +1,4 @@
-from .models import Comment
+from .models import Comment, Contact
 from django import forms
 
 

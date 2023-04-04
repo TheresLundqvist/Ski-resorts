@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.views import generic, View
 from .models import Resort, Rating, Comment, Contact
 from .forms import CommentForm
@@ -62,6 +63,16 @@ class ResortDetail(View):
 
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        subject = request.POST.get('subject')
+        desc = request.POST.get('desc')
+        query = Contact(name=name, email=email, phone=phone, subject=subject, body=desc)  # noqa
+        query.save()
+        messages.success(request, "Thank's for sharing!")
+        return redirect('/contact')
     return render(request, 'contact.html')
 
 

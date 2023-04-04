@@ -42,10 +42,14 @@ class Resort(models.Model):
 
 
 class Contact(models.Model):
-    resort = models.ForeignKey(Resort, on_delete=models.CASCADE, null=True, blank=False)  # noqa
     name = models.CharField(max_length=200, null=False, blank=False)
     email = models.EmailField(null=False, blank=False)
-    phone = models.IntegerField(null=False, blank=False)
+    phone = models.CharField(max_length=15, default='Format: +46 000 000 000', null=False, blank=False)  # noqa
+    subject = models.CharField(max_length=500, null=False, blank=False, default='Subject')  # noqa
+    body = models.TextField(default='Let us know what is on your mind')
+
+    def __str__(self):
+        return f'Message from {self.name}'
 
 
 class Rating(models.Model):
