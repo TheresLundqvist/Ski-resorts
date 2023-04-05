@@ -8,15 +8,15 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 class Resort(models.Model):
-    main_image = CloudinaryField("main image", default="placeholder")
+    main_image = CloudinaryField("image", default="placeholder")
     resort = models.CharField(max_length=200, null=False, blank=False)
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=False)  # noqa
     description = models.TextField(null=False, blank=False)
     location_address = models.CharField(max_length=200, null=False, blank=False)  # noqa
     country = CountryField(blank_label="(select country)", default=True, max_length=80)  # noqa
-    image_one = CloudinaryField("image one", default="placeholder")
-    image_two = CloudinaryField("image two", default="placeholder")
-    image_three = CloudinaryField("image three", default="placeholder")
+    image_one = CloudinaryField("image", default="placeholder")
+    image_two = CloudinaryField("image", default="placeholder")
+    image_three = CloudinaryField("image", default="placeholder")
     hours = models.CharField(max_length=200, null=False, blank=False)
     opening_season = models.CharField(max_length=300, null=False, blank=False)  # noqa
     has_ski_rentals = models.BooleanField(default=True, null=False, blank=False)  # noqa
