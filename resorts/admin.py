@@ -1,15 +1,13 @@
 from django.contrib import admin
 from .models import Resort, Contact, Rating, Comment
-from django_summernote.admin import SummernoteModelAdmin
 
 
 @admin.register(Resort)
-class ResortAdmin(SummernoteModelAdmin):
+class ResortAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('resort',)}
     search_fields = ['resort', 'name', 'country', 'user_name']
     list_display = ('resort', 'country', 'status', 'average_rating')
     list_filter = ('status',)
-    summernote_fields = ('description')
 
 
 @admin.register(Contact)
