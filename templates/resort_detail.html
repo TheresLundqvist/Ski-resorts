@@ -9,7 +9,7 @@
     <img src="{% static 'images/resort-placeholder.webp' %}" class="img-thumbnail main-img"
         alt="ski resorts picture">
     {% else %}
-    <img class="img-thumbnail main-img" src=" {{ resort.main_image.url }}">
+    <img class="img-thumbnail main-img" src="{{ resort.main_image.url }}" alt="image for {{ resort.resort }}">
     {% endif %}
     <div class="resort-name">
         <h5 class="resort-h5"> {{ resort.resort }}</h5>
@@ -19,12 +19,12 @@
     </div>
     <div class="card-body">
         <p class="text-p" style="font-family: Josefin Sans, sans-serif;">{{ resort.description | safe }}</p>
-        <hr />
+        <hr>
         <div>
             <h3 class="text-h3"><i class="fa-solid fa-map-pin"></i> Find us here</h3>
             <p class="text-p">{{ resort.location_address | safe }}</p>
         </div>
-        <hr />
+        <hr>
         <div id="carouselExampleIndicators" class="carousel slide mb-4">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -187,7 +187,7 @@
             </table>
         </div>
     </div>
-    <hr />
+    <hr>
     <div class="row row-cols-3 text-center">
         <div class="card-body">
             <span class="text-uppercase about">Rating</span><br>
