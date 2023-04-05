@@ -18,7 +18,7 @@
       <div class="carousel-caption">
         <h5 class="img-intro">Find the Ski Resort Best suited for You</h5>
         <p class="intro-exp">All resorts listed at one place</p>
-        <a class="btn btn-org" href="#">View All</a>
+        <a class="btn btn-org" href="{% url 'home' %}#all-resorts">View All</a>
       </div>
     </div>
     <div class="carousel-item">
@@ -26,7 +26,7 @@
       <div class="carousel-caption">
         <h5 class="img-intro">Secure a Great Ski Experience</h5>
         <p class="intro-exp">Read customer experience and leave yours</p>
-        <a class="btn btn-org" href="#">View All</a>
+        <a class="btn btn-org" href="{% url 'home' %}#all-resorts">View All</a>
       </div>
     </div>
     <div class="carousel-item">
@@ -34,7 +34,7 @@
       <div class="carousel-caption">
         <h5 class="img-intro">Get inspired <i class="fa-solid fa-angles-right"></i> Go Skiing</h5>
         <p class="intro-exp">See all amenities for the resort</p>
-        <a class="btn btn-org" href="#">View All</a>
+        <a class="btn btn-org" href="{% url 'home' %}#all-resorts">View All</a>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@
 </div>
 
 <!-- Resort Entries Column -->
-<div class="container-fluid">
+<div class="container-fluid" id="all-resorts">
   <div class="row">
     <div class="col-12 mt-3">
       <div class="row">
