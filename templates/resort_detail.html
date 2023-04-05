@@ -4,7 +4,7 @@
 
 {% load static %}
 
-<div class="card w-100 text-style">
+<div class="card container-fluid w-100 text-style">
     {% if "placeholder" in resort.main_image.url %}
     <img src="{% static 'images/resort-placeholder.webp' %}" class="img-thumbnail main-img"
         alt="ski resorts picture">
@@ -189,19 +189,19 @@
     </div>
     <hr>
     <div class="row row-cols-3 text-center">
-        <div class="card-body">
+        <div class="col-4 px-0">
             <span class="text-uppercase about">Rating</span><br>
             <span><i class="fa-solid fa-star"></i></span>
             <span>{{ resort.average_rating }}</span>
         </div>
-        <div class="card-body">
+        <div class="col-4 px-0">
             {% with comments.count as total_comments %}
             <span class="text-uppercase about">Comments</span><br>
             <span><i class="fa-solid fa-comment"></i></span>
             <span>{{ total_comments }}</span>
             {% endwith %}
         </div>
-        <div class="card-body">
+        <div class="col-4 px-0">
             <span class="text-uppercase about">Share</span><br>
             <span><i class="fa-regular fa-share-from-square"></i></span>
         </div>
@@ -213,7 +213,7 @@
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <div class="card-body">
+            <div class="px-0">
                 <h3 class="text-h3"><i class="fa-solid fa-comments"></i> Comments</h3>
                 {% for comment in comments %}
                 <div class="comments">
