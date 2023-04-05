@@ -2,8 +2,6 @@
 
 {% load crispy_forms_tags %}
 
-{% load static %}
-
 <div class="card w-100 text-style">
     {% if "placeholder" in resort.main_image.url %}
     <img src="{% static 'images/resort-placeholder.jpeg' %}" class="img-thumbnail main-img"
