@@ -58,7 +58,7 @@
           <div class="card mb-4">
             <div class="card">
               {% if "placeholder" in resort.main_image.url %}
-              <img class="card-img-top" src="{% static '/resort-placeholder.jpeg' %}" />
+              <img class="card-img-top" src="{% static 'images/resort-placeholder.webp' %}" />
               {% else %}
               <img class="card-img-top" src=" {{ resort.main_image.url }}">
               {% endif %}
