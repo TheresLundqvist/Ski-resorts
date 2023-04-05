@@ -22,9 +22,9 @@ class RatingAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('name', 'body', 'post', 'created_on', 'approved')
+    list_display = ('user', 'body', 'resort', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')
-    search_fields = ['name', 'email', 'body']
+    search_fields = ['user', 'body']
     actions = ['approve_comments']
 
     def approve_comments(self, request, queryset):

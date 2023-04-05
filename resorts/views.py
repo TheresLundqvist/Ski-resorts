@@ -78,3 +78,34 @@ def contact(request):
 
 def about(request):
     return render(request, 'about.html')
+
+
+def edit_comment(request, comment_id, slug):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if not comment.user == request.user:
+        messages.error(request, 'You dont have access to edit this comment')
+        return redirect('resort_detail', slug)
+    form = CommentForm(request.POST or None, instance=comment)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.instance.approved = False
+            form.save()
+            messages.success(request, 'Comment updated. Awaiting approval')
+            return redirect('resort_detail', slug)
+        messages.error(request, 'Error occured. Please try again')
+    context = {
+        'comment': comment,
+        'form': form,
+    }
+    template = 'edit_comment.html'
+    return render(request, template, context)
+
+
+def delete_comment(request, comment_id, slug):
+    comment = get_object_or_404(Comment, id=comment_id)
+    if not comment.user == request.user:
+        messages.error(request, 'You dont have access to delete this comment')
+        return redirect('resort_detail', slug)
+    comment.delete()
+    messages.success(request, 'Comment successfully deleted')
+    return redirect('resort_detail', slug)

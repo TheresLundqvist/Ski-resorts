@@ -218,14 +218,44 @@
                 {% for comment in comments %}
                 <div class="comments">
                     <span class="font-weight-bold commenter">
-                        {{ comment.name }}
+                        {{ comment.user }}
                     </span>
+                    {% if request.user == comment.user %}
+                        <a href="{% url 'edit_comment' comment.id resort.slug %}">Edit</a>
+                        |
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-delete-{{ comment.id }}">Delete</a>
+                        <div class="modal fade" id="modal-delete-{{ comment.id }}" tabindex="-1"
+                            aria-labelledby="modal-label-{{ comment.id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal-title fs-5" id="modal-label-{{ comment.id }}">Delete Comment
+                                        </h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete this comment?
+                                        <br>
+                                        This action is permanent.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <a href="{% url 'delete_comment' comment.id resort.slug %}" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <br>
                     <span class="comment-body">
                         {{ comment.body }}
                     </span>
                     <div class="comment-date">
                         {{ comment.created_on }}
                     </div>
+                    <br>
                 </div>
                 {% endfor %}
             </div>
