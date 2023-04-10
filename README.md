@@ -1,134 +1,114 @@
 # SKI RESORTS
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+Ski Resorts website is an online portal with information about ski resorts all over the world. Ski resort locates information about the   
+resort and then presents the information in an easy and comprehensible way. It's a quick and easy way to find the next and best ski  
+adventure!
 
-Ski Resorts website is a online portal with information about ski resorts all over the world. Ski resorts gathers information about the resorts and then presents the information on the webiste in a easy and comprehensable way so that users dont have to hussle all over the internet to gather that information them selves. It's a quick and easy way to find the next adn best ski adventure!
+**Ski resorts locator made it easier for everyone**
 
-User's can find all information about what each resort offers. The website collects information about the opening season and hours for each resort, giving the user the ability to find a resort opened at a preferred month. For users with children or disabilities the website list the different lifting arrangements for each resort. 
+The webiste is targeted towards users that want to see what diffrent ski resorts is out there, compare them and find the resort best  
+suited for their needs. Maybe they just want to check the opening season and hours for a resort or simply want to know if a resort  
+offers accommodation or not. For those that are considering a visit to a resort but want to see what others thought of the resort  
+through their experience, can find user comments and ratings attached to each resort. Users with disabilities or smaller children can  
+find available lifting arrangements for each resort.
 
-Site users will be able to share and view other ski experiences through the comment and rating function for the resorts.
-
-https://ui.dev/amiresponsive?url=https://ski-resorts-locator.herokuapp.com
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-![screenshot](documentation/mockup.png)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+<img width="800" src="documentation/responsive.png">
 
 ## UX
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-### Colour Scheme
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Explain your colours and the colour scheme.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
-
-### Typography
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
-
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+A visitor to Ski Resorts Locator would be someone who is most likely an adult who enjoys ski- and outdoor adventure and is curious  
+to find the next ski resort to visit.
 
 ## User Stories
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+### EPIC | Admin page
 
-In this section, list all of your user stories for the project.
+- As a site administrator I can view my ski resorts so that I can manage all resorts I made in one place.
+- As a site admin I can edit and delete comments/star ratings I made so that I can manage any typos or misstakes.
+- As a site administrator I can create/read/update and delete ski resorts so that I can manage the app content.
+- As a admin I can edit and delete resorts that I created so that I can make changes without having to start over.
+- As a admin I can input details so that I can market and share our resort with others.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+### EPIC | Rating and commenting
 
-### New Site Users
+- As a site admin I can approve comments so that no objectionable comments is shown.
+- As a site user I can comment on ski resorts so that I can share my experience with others.
+- As a site user I can give ski resorts star rating so that other users can make a better assessment.
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+### EPIC | Site Navigation
 
-### Returning Site Users
+- As a site user I can intuitively navigate around the site so that I can easily find content.
+- As a site user I can immediately understand the purpose of the site so that I can decide if it meets my needs.
+- As a site user I can click on a ski resort I am interested in so that I can get all the details for that resort.
+- As a site user I can see a list with all ski resorts so that I can choose a resort to visit.
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+### EPIC | User Account
 
-### Site Admin
+- As a site user I can see my log in status so that I can visually see if im logged in or out.
+- As a site user I can register an account so that I can add/edit/delete information and keep the resorts details up to date.
+- As a site user I can log in and out of my account so that I can keep my account secure.
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+### User Stories not yet implemented
+The following user stories were scoped out of the project due to time constraints and labelled as "Won't Have" and "Could Have" on  
+the project board on Github. It is intended that these user stories will be implemented at a later date.
+
+- As a ski user I can find suggestions of activities in the area so that I can vary my stay.
+- As a site user I can find links to local ski rentals so that I can find the equipment I need.
+- As a site user I can find links to car rentals so that I can find a rental car as close to the ski resort as possible.
+- As a site user I can find suggestions for accommodations so that I can rely on finding the nearest.
+- As a site user I can view all my bookmarked ski resorts so that I can find them all in one place.
+- As a site user I can filter ski resorts so that I can find resorts in my area.
+- As a site user I can bookmark a ski resort so that I can find the resort easier at a later time.
+- As a site user I can see the ski resorts with the best user rating on the site's main page so that I can get inspired at once.
+
+## Design
+
+The site has a very simple and clean design with a wintry color theme and good contrast.
+
+### Colour Scheme
+
+I used [coolors.co](https://coolors.co/e84610-112b3c-ffffff-5d646b) to generate my colour palette.
+
+<img width="800" src="documentation/colour-scheme.png">  
+
+The colour scheme of the site is mainly golden gate bridge-orange, dark blue and White. The colours chosen are wintry white and blue  
+and with orange to give good contrast.
+
+Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility.
+
+- **#E84610** used for primary highlights, icons and buttons.
+- **#112B3C** used for brand, headings and hoover effects on buttons.
+- **#FFFFF** used for backgrounds
+- **#5D646B** used for footer text.
+
+### Fonts
+
+Josefin Sans is the main font used for the body of the website with the only exeption of using Tilt Neon for the sub heading in  
+the main image caraousel. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main  
+font isn't being imported into the site correctly.
+
+- [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans?query=josefin+sans) was used for the body content.
+
+- [Tilt Neon](https://fonts.google.com/specimen/Tilt+Neon?query=tilt+neon) was used for sub heading in main image caraousel.
+
+### Icons
+
+Icons from Font Awesome is used throughout the site, such as brand icon, search bar magnifying glass, star rating, social media icons  
+and icons for heading in resort details.
+
+
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+
+### Imagery
+
+A total of five static images is used for the website. Three static images is used for the main image caraousel. One is used as a  
+placeholder image for the resorts if the user chooses not to upload a image/images for a resort. The last static image uploaded to  
+the app is used for the about page. The rest of the imagery will be uploaded and stored in Cloudinary by admin when creating the  
+individual resorts.  
+
+
+
+
 
 ## Wireframes
 
