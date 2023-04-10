@@ -17,6 +17,10 @@ body {
     padding-right: 2px;
 }
 
+.nav-item {
+    color: #112B3C;
+}
+
 .navbar-brand {
     text-transform: uppercase;
     font-weight: 500;
@@ -24,6 +28,7 @@ body {
     font-size: 1.7em;
     margin-right: unset;
     padding-left: 5px;
+    color: #112B3C;
 }
 
 .navbar-nav {
@@ -32,14 +37,14 @@ body {
 
 .btn-search {
     background-color: #E84610;
-    color: #f8f9fa;
+    color: #fff;
     margin-right: 10px;
     margin-left: 5px;
 }
 
 .btn-search:hover {
-    background-color: #f8f9fa;
-    color: #E84610;
+    background-color: #112B3C;
+    color: #fff;
 }
 
 .search-bar {
@@ -203,7 +208,7 @@ td,
     left: 4.6%;
     height: 6vh;
     background-color: #112B3C;
-    color: #eee;
+    color: #fff;
     text-transform: uppercase;
     font-style: italic;
     padding-top: 13px;
@@ -218,7 +223,7 @@ td,
     top: 3.2%;
     left: 4.6%;
     height: 5vh;
-    background-color: #eee;
+    background-color: #fff;
     color: #112B3C;
     padding-top: 10px;
     padding-left: 10px;
@@ -283,14 +288,14 @@ footer {
 .btn-sign {
     font-size: 1em;
     background-color: #E84610;
-    color: #eee;
+    color: #fff;
     text-transform: uppercase;
     font-style: italic;
 }
 
 .btn-sign:hover {
     background-color: #112B3C;
-    color: #eee;
+    color: #fff;
 }
 
 /* Comments */
