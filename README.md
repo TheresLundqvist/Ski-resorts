@@ -49,8 +49,8 @@ to find the next ski resort to visit.
 - As a site user I can log in and out of my account so that I can keep my account secure.
 
 ### User Stories not yet implemented
-The following user stories were scoped out of the project due to time constraints and labelled as "Won't Have" and "Could Have" on  
-the project board on Github. It is intended that these user stories will be implemented at a later date.
+The following user stories were scoped out of the project due to time constraints and labelled as "Won't Have" and "Could Have"  
+on the project board on Github. It is intended that these user stories will be implemented at a later date.
 
 - As a ski user I can find suggestions of activities in the area so that I can vary my stay.
 - As a site user I can find links to local ski rentals so that I can find the equipment I need.
@@ -61,6 +61,16 @@ the project board on Github. It is intended that these user stories will be impl
 - As a site user I can bookmark a ski resort so that I can find the resort easier at a later time.
 - As a site user I can see the ski resorts with the best user rating on the site's main page so that I can get inspired at once.
 
+## Agile Methodology
+
+Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/TheresLundqvist/projects/1)
+
+The 5 Epics listed above were documented within the Github project as Labels. A Github Issue was created for each User Story which  
+was then allocated to a label(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been  
+completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution. The user stories were  
+also added and worked on in project iterations with a set deadline through Github milestones, this project was conducted through a  
+total of 4 iterations. The user stories not yet to be finnished were added to a project backlog(milestone).
+  
 ## Design
 
 The site has a very simple and clean design with a wintry color theme and good contrast.
@@ -71,10 +81,11 @@ I used [coolors.co](https://coolors.co/e84610-112b3c-ffffff-5d646b) to generate 
 
 <img width="800" src="documentation/colour-scheme.png">  
 
-The colour scheme of the site is mainly golden gate bridge-orange, dark blue and White. The colours chosen are wintry white and blue  
-and with orange to give good contrast.
+The colour scheme of the site is mainly golden gate bridge-orange, dark blue and White. The colours chosen are wintry white and   
+blue and with orange to give good contrast.
 
-Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility.
+Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user  
+accessibility.
 
 - **#E84610** used for primary highlights, icons and buttons.
 - **#112B3C** used for brand, headings and hoover effects on buttons.
@@ -84,8 +95,8 @@ Great care was taken to establish a good contrast between background colours and
 ### Fonts
 
 Josefin Sans is the main font used for the body of the website with the only exeption of using Tilt Neon for the sub heading in  
-the main image caraousel. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main  
-font isn't being imported into the site correctly.
+the main image caraousel. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the  
+main font isn't being imported into the site correctly.
 
 - [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans?query=josefin+sans) was used for the body content.
 
@@ -93,8 +104,8 @@ font isn't being imported into the site correctly.
 
 ### Icons
 
-Icons from Font Awesome is used throughout the site, such as brand icon, search bar magnifying glass, star rating, social media icons  
-and icons for heading in resort details.
+Icons from Font Awesome is used throughout the site, such as brand icon, search bar magnifying glass, star rating, social media  
+icons and icons for heading in resort details.
 
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
@@ -102,130 +113,186 @@ and icons for heading in resort details.
 ### Imagery
 
 A total of five static images is used for the website. Three static images is used for the main image caraousel. One is used as a  
-placeholder image for the resorts if the user chooses not to upload a image/images for a resort. The last static image uploaded to  
-the app is used for the about page. The rest of the imagery will be uploaded and stored in Cloudinary by admin when creating the  
-individual resorts.  
-
-
-
-
+placeholder image for the resorts if the user chooses not to upload a image/images for a resort. The last static image uploaded  
+to the app is used for the about page. The rest of the imagery will be uploaded and stored in Cloudinary by admin when creating  
+the individual resorts.  
 
 ## Wireframes
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+I've used [Miro](https://miro.com/app/dashboard/) to design my site wireframes.
 
 ### Home Page Wireframes
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
+<details>
+<summary>Home Page</summary>  
+<strong>Desktop View</strong>  
 
-### About Page Wireframes
+<img width="600" src="documentation/wireframes/landing-page.png">  
+  
+<strong>Mobile</strong>  
+<img width="150" src="documentation/wireframes/landingpage-mobile.png">  
+</details>  
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-about.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
+<details>
+<summary>Resort Details page</summary>  
+<strong>Desktop View</strong>  
 
-### Contact Page Wireframes
+<img width="600" src="documentation/wireframes/resort-details.png">  
+  
+<strong>Mobile</strong>  
+<img width="150" src="documentation/wireframes/resortdetails-mobile.png">  
+</details>  
+<details>
+<summary>About page</summary>  
+<strong>Desktop View</strong>  
 
-| Size | Screenshot |
-| --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-contact.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
+<img width="600" src="documentation/wireframes/about-page.png">  
+  
+<strong>Mobile</strong>  
+<img width="150" src="documentation/wireframes/aboutpage-mobile.png">  
+</details>  
+<details>
+<summary>Contact page</summary>  
+<strong>Desktop View</strong>  
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+<img width="600" src="documentation/wireframes/contact-page.png">  
+  
+<strong>Mobile</strong>  
+<img width="150" src="documentation/wireframes/contactpage-mobile.png">  
+</details>  
+<details>
+<summary>Account pages</summary>  
+<strong>Desktop View</strong>  
 
-Repeat for any addition wireframe pages you have.
+<img width="600" src="documentation/wireframes/sign-in.png">  
+<img width="600" src="documentation/wireframes/sign-out.png">  
+<img width="600" src="documentation/wireframes/sign-up.png">  
+  
+<strong>Mobile</strong>  
+<img width="150" src="documentation/wireframes/signin-mobile.png">  
+<img width="150" src="documentation/wireframes/signout-mobile.png">  
+<img width="150" src="documentation/wireframes/signup-mobile.png">  
+</details>  
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Features
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+### Header
 
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
+<img width="800" src="documentation/header.png">  
 
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
+**Logo**  
+A customised logo was created using Josefin Sans font in italic style with two arrow icon from Font Awesome. This logo is  
+positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.  
+  
+**Navigation**  
+The navigation bar is present at the top of every page and includes all links to the various other pages.
+The More navigation link  
+is a drop down menu which includes a view all link and the Contact and About pages. When the user has logged in, the login link  
+changes to display log out instead, giving the user their logged in status.
 
-For some/all of your features, you may choose to reference the specific project files that implement them.
+### Footer
 
-IMPORTANT: Remember to always include a screenshot of each individual feature!
+<img width="800" src="documentation/footer.png">  
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The footer section includes links to Facebook, Instagram, Twitter and Youtube. Clicking the links in the footer opens a separate  
+browser tab to avoid pulling the user away from the site.
+  
+### Home Page  
+  
+**Main Image Carousel**  
+  
+<img width="800" src="documentation/main-carousel.png">  
+  
+The home page includes a bootstrap image carousel that alternates thorugh three images with diffrent encouraging and telling  
+texts about the ski resorts website and then a view all button which links to the resort cards to view all the resorts on the website.  
 
-### Existing Features
+- Find the Ski Resort best suited for you - All resort listed in one place  
+- Get inspired >> Go Skiing - See all the amenities for the resort
+- Secure a great ski experience - Read customer experience and leave yours
 
-- **Title for feature #1**
+**Resort cards**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+<img width="800" src="documentation/resort-cards.png">  
+  
+The resort cards gives the user a glimpse over the diffrent resorts on the webiste. The user can preview the resort through a image,  
+see a preview of the resort description and a read more button that takes the user to the full detailed resort page. The resort cards  
+are intented to give the user the possibility to overview the diffrent resorts in a clean and organized way, get inspired and then let  
+them decide which resort they want a more detailed view over.  
 
-![screenshot](documentation/feature01.png)
+### Resort details page 
+  
+**Resort description**  
+  
+<img width="800" src="documentation/resortdetails-description.png">  
+  
+After the resort image a detailed description of the resort follows. It is a descriptive text that sums up the listed features of the  
+resort. This textfield creates a more painted picture for the user. Underneath the description a bootstrap image carousel shuffles  
+three images of the resort to give the user some inspiration and overview of the resort.
+  
+**Resort listed features**  
+  
+<img width="800" src="documentation/resortdetails-listed.png">  
+  
+This list is an overview of the resort amenities. The user can find useful information before their planned visit such as opening hours  
+and prices. If a user is in need of a particular lift, they can find all lifting arrangements available for the resort in this listed view. This  
+view is intended as a quick and clean way for the user to get an fast overview of the resort and what they offer.
 
-- **Title for feature #2**
+**Rating and comments counter**  
+  
+<img width="800" src="documentation/rating-comment-symbols.png">  
+  
+The counters for rating and comments give the user a fast assessment of the resort. They can see how many likes and comments the resort has gotten from other users. Users can use the share icon to share the page and resort with others.  
+  
+**Comments**  
+  
+<img width="800" src="documentation/comments.png">  
+  
+All users can view all comments made by others, but only logged-in users can leave a comment. The comments are only visable after and if admin approves. 
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+**Edit and delete comments**  
 
-![screenshot](documentation/feature02.png)
 
-- **Title for feature #3**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+### About page  
+  
+<img width="800" src="documentation/aboutpage-screenshot.png">  
 
-![screenshot](documentation/feature03.png)
+### Contact page  
+  
+<img width="400" src="documentation/contactpage-screenshot.png">  
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+### Account pages  
+  
+**Register**  
 
-Repeat as necessary for as many features as your site contains.
+<img width="400" src="documentation/signup-page.png">  
 
-Hint: the more, the merrier!
+**Sign in**  
+  
+<img width="400" src="documentation/signin-page.png">  
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+**Sign out**  
+  
+<img width="400" src="documentation/signout-page.png"> 
 
-### Future Features
+## Future Features
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+The following user stories were scoped out of the project due to time constraints and labelled as "Won't have" 
+and "Could Have" on the project board in Github. It is intended that these user stories will be implemented at a later date.  
+  
+- As a ski user I can find suggestions of activities in the area so that I can vary my stay.
+- As a site user I can find links to local ski rentals so that I can find the equipment I need.
+- As a site user I can find links to car rentals so that I can find a rental car as close to the ski resort as possible.
+- As a site user I can find suggestions for accommodations so that I can rely on finding the nearest.
+- As a site user I can view all my bookmarked ski resorts so that I can find them all in one place.
+- As a site user I can filter ski resorts so that I can find resorts in my area.
+- As a site user I can bookmark a ski resort so that I can find the resort easier at a later time.
+- As a site user I can see the ski resorts with the best user rating on the site's main page so that I can get inspired at once.
 
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Title for future feature #1
-    - Any additional notes about this feature.
-- Title for future feature #2
-    - Any additional notes about this feature.
-- Title for future feature #3
-    - Any additional notes about this feature.
 
 ## Tools & Technologies Used
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
@@ -253,15 +320,6 @@ Feel free to delete any unused items below as necessary.
 
 ## Database Design
 
-Entity Relationship Diagrams (ERD) help to visualize database architecture before creating models.
-Understanding the relationships between different tables can save time later in the project.
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Using your defined models (one example below), create an ERD with the relationships identified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ```python
 class Product(models.Model):
     category = models.ForeignKey(
@@ -278,9 +336,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-```
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 A couple recommendations for building free ERDs:
 - [Draw.io](https://draw.io)
@@ -310,68 +365,12 @@ Using Markdown formatting to represent an example ERD table using the Product mo
     | | image_url | URLField | |
     | | image | ImageField | |
 
-## Agile Development Process
-
-### GitHub Projects
-
-[GitHub Projects](https://github.com/TheresLundqvist/Ski-resorts/projects) served as an Agile tool for this project.
-It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
-
-Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Consider adding a basic screenshot of your Projects Board.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-![screenshot](documentation/gh-projects.png)
-
-### GitHub Issues
-
-[GitHub Issues](https://github.com/TheresLundqvist/Ski-resorts/issues) served as an another Agile tool.
-There, I used my own **User Story Template** to manage user stories.
-
-It also helped with milestone iterations on a weekly basis.
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Consider adding a screenshot of your Open and Closed Issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- [Open Issues](https://github.com/TheresLundqvist/Ski-resorts/issues)
-
-    ![screenshot](documentation/gh-issues-open.png)
-
-- [Closed Issues](https://github.com/TheresLundqvist/Ski-resorts/issues?q=is%3Aissue+is%3Aclosed)
-
-    ![screenshot](documentation/gh-issues-closed.png)
-
-### MoSCoW Prioritization
-
-I've decomposed my Epics into stories prior to prioritizing and implementing them.
-Using this approach, I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
-
-- **Must Have**: guaranteed to be delivered (*max 60% of stories*)
-- **Should Have**: adds significant value, but not vital (*the rest ~20% of stories*)
-- **Could Have**: has small impact if left out (*20% of stories*)
-- **Won't Have**: not a priority for this iteration
 
 ## Testing
 
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-**IMPORTANT:**
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 The live deployed application can be found deployed on [Heroku](https://ski-resorts-locator.herokuapp.com).
 
@@ -504,32 +503,23 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
 Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Credits
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 In this section you need to reference where you got your content, media, and extra help from.
 It is common practice to use code from other repositories and tutorials,
 however, it is important to be very specific about these sources to avoid plagiarism.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### Content
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
 A few examples have been provided below to give you some ideas.
 
 Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 | Source | Location | Notes |
 | --- | --- | --- |
@@ -548,7 +538,6 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 
 ### Media
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
 A few examples have been provided below to give you some ideas.
@@ -559,8 +548,6 @@ Let the assessors know that you have explicit rights to use the media files with
 Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
 The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
 by sending yourself the following command: `!freemedia`.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
@@ -576,12 +563,8 @@ by sending yourself the following command: `!freemedia`.
 
 ### Acknowledgements
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
 Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
 A few examples have been provided below to give you some ideas.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
