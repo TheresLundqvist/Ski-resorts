@@ -1,23 +1,16 @@
 # SKI RESORTS
 
-Ski Resorts website is an online portal with information about ski resorts all over the world. Ski resort locates information about the   
-resort and then presents the information in an easy and comprehensible way. It's a quick and easy way to find the next and best ski  
-adventure!
+Ski Resorts website is an online portal with information about ski resorts all over the world. Ski resort locates information about the resort and then presents the information in an easy and comprehensible way. It's a quick and easy way to find the next and best ski adventure!
 
 **Ski resorts locator made it easier for everyone**
 
-The webiste is targeted towards users that want to see what diffrent ski resorts is out there, compare them and find the resort best  
-suited for their needs. Maybe they just want to check the opening season and hours for a resort or simply want to know if a resort  
-offers accommodation or not. For those that are considering a visit to a resort but want to see what others thought of the resort  
-through their experience, can find user comments and ratings attached to each resort. Users with disabilities or smaller children can  
-find available lifting arrangements for each resort.
+The webiste is targeted towards users that want to see what diffrent ski resorts is out there, compare them and find the resort best suited for their needs. Maybe they just want to check the opening season and hours for a resort or simply want to know if a resort offers accommodation or not. For those that are considering a visit to a resort but want to see what others thought of the resort through their experience, can find user comments and ratings attached to each resort. Users with disabilities or smaller children can find available lifting arrangements for each resort.
 
 <img width="800" src="documentation/responsive.png">
 
 ## UX
 
-A visitor to Ski Resorts Locator would be someone who is most likely an adult who enjoys ski- and outdoor adventure and is curious  
-to find the next ski resort to visit.
+A visitor to Ski Resorts Locator would be someone who is most likely an adult who enjoys ski- and outdoor adventure and is curious to find the next ski resort to visit.
 
 ## User Stories
 
@@ -49,8 +42,7 @@ to find the next ski resort to visit.
 - As a site user I can log in and out of my account so that I can keep my account secure.
 
 ### User Stories not yet implemented
-The following user stories were scoped out of the project due to time constraints and labelled as "Won't Have" and "Could Have"  
-on the project board on Github. It is intended that these user stories will be implemented at a later date.
+The following user stories were scoped out of the project due to time constraints and labelled as "Won't Have" and "Could Have" on the project board on Github. It is intended that these user stories will be implemented at a later date.
 
 - As a ski user I can find suggestions of activities in the area so that I can vary my stay.
 - As a site user I can find links to local ski rentals so that I can find the equipment I need.
@@ -65,11 +57,7 @@ on the project board on Github. It is intended that these user stories will be i
 
 Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/TheresLundqvist/projects/1)
 
-The 5 Epics listed above were documented within the Github project as Labels. A Github Issue was created for each User Story which  
-was then allocated to a label(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been  
-completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution. The user stories were  
-also added and worked on in project iterations with a set deadline through Github milestones, this project was conducted through a  
-total of 4 iterations. The user stories not yet to be finnished were added to a project backlog(milestone).
+The 5 Epics listed above were documented within the Github project as Labels. A Github Issue was created for each User Story which was then allocated to a label(Epic). Each User Story has defined acceptance criteria to make it clear when the User Story has been completed. The acceptance criteria are further broken down into tasks to facilitate the User Story's execution. The user stories were also added and worked on in project iterations with a set deadline through Github milestones, this project was conducted through a total of 4 iterations. The user stories not yet to be finnished were added to a project backlog(milestone).
   
 ## Design
 
@@ -81,11 +69,9 @@ I used [coolors.co](https://coolors.co/e84610-112b3c-ffffff-5d646b) to generate 
 
 <img width="800" src="documentation/colour-scheme.png">  
 
-The colour scheme of the site is mainly golden gate bridge-orange, dark blue and White. The colours chosen are wintry white and   
-blue and with orange to give good contrast.
+The colour scheme of the site is mainly golden gate bridge-orange, dark blue and White. The colours chosen are wintry white and blue and with orange to give good contrast.
 
-Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user  
-accessibility.
+Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility.
 
 - **#E84610** used for primary highlights, icons and buttons.
 - **#112B3C** used for brand, headings and hoover effects on buttons.
@@ -94,9 +80,7 @@ accessibility.
 
 ### Fonts
 
-Josefin Sans is the main font used for the body of the website with the only exeption of using Tilt Neon for the sub heading in  
-the main image caraousel. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the  
-main font isn't being imported into the site correctly.
+Josefin Sans is the main font used for the body of the website with the only exeption of using Tilt Neon for the sub heading in the main image caraousel. These fonts were imported via Google Fonts. Sans Serif is the backup font, in case for any reason the main font isn't being imported into the site correctly.
 
 - [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans?query=josefin+sans) was used for the body content.
 
@@ -104,18 +88,14 @@ main font isn't being imported into the site correctly.
 
 ### Icons
 
-Icons from Font Awesome is used throughout the site, such as brand icon, search bar magnifying glass, star rating, social media  
-icons and icons for heading in resort details.
+Icons from Font Awesome is used throughout the site, such as brand icon, search bar magnifying glass, star rating, social media icons and icons for heading in resort details.
 
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
 ### Imagery
 
-A total of five static images is used for the website. Three static images is used for the main image caraousel. One is used as a  
-placeholder image for the resorts if the user chooses not to upload a image/images for a resort. The last static image uploaded  
-to the app is used for the about page. The rest of the imagery will be uploaded and stored in Cloudinary by admin when creating  
-the individual resorts.  
+A total of five static images is used for the website. Three static images is used for the main image caraousel. One is used as a placeholder image for the resorts if the user chooses not to upload a image/images for a resort. The last static image uploaded to the app is used for the about page. The rest of the imagery will be uploaded and stored in Cloudinary by admin when creating the individual resorts.  
 
 ## Wireframes
 
@@ -182,21 +162,16 @@ I've used [Miro](https://miro.com/app/dashboard/) to design my site wireframes.
 <img width="800" src="documentation/header.png">  
 
 **Logo**  
-A customised logo was created using Josefin Sans font in italic style with two arrow icon from Font Awesome. This logo is  
-positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.  
+A customised logo was created using Josefin Sans font in italic style with two arrow icon from Font Awesome. This logo is positioned in the top left of the navigation bar. The logo is linked to the home page for ease of navigation for the user.  
   
 **Navigation**  
-The navigation bar is present at the top of every page and includes all links to the various other pages.
-The More navigation link  
-is a drop down menu which includes a view all link and the Contact and About pages. When the user has logged in, the login link  
-changes to display log out instead, giving the user their logged in status.
+The navigation bar is present at the top of every page and includes all links to the various other pages. The More navigation link is a drop down menu which includes a view all link and the Contact and About pages. When the user has logged in, the login link changes to display log out instead, giving the user their logged in status.
 
 ### Footer
 
 <img width="800" src="documentation/footer.png">  
 
-The footer section includes links to Facebook, Instagram, Twitter and Youtube. Clicking the links in the footer opens a separate  
-browser tab to avoid pulling the user away from the site.
+The footer section includes links to Facebook, Instagram, Twitter and Youtube. Clicking the links in the footer opens a separate browser tab to avoid pulling the user away from the site.
   
 ### Home Page  
   
@@ -204,8 +179,7 @@ browser tab to avoid pulling the user away from the site.
   
 <img width="800" src="documentation/main-carousel.png">  
   
-The home page includes a bootstrap image carousel that alternates thorugh three images with diffrent encouraging and telling  
-texts about the ski resorts website and then a view all button which links to the resort cards to view all the resorts on the website.  
+The home page includes a bootstrap image carousel that alternates thorugh three images with diffrent encouraging and telling texts about the ski resorts website and then a view all button which links to the resort cards to view all the resorts on the website.  
 
 - Find the Ski Resort best suited for you - All resort listed in one place  
 - Get inspired >> Go Skiing - See all the amenities for the resort
@@ -215,10 +189,7 @@ texts about the ski resorts website and then a view all button which links to th
 
 <img width="800" src="documentation/resort-cards.png">  
   
-The resort cards gives the user a glimpse over the diffrent resorts on the webiste. The user can preview the resort through a image,  
-see a preview of the resort description and a read more button that takes the user to the full detailed resort page. The resort cards  
-are intented to give the user the possibility to overview the diffrent resorts in a clean and organized way, get inspired and then let  
-them decide which resort they want a more detailed view over.  
+The resort cards gives the user a glimpse over the diffrent resorts on the webiste. The user can preview the resort through a image, see a preview of the resort description and a read more button that takes the user to the full detailed resort page. The resort cards are intented to give the user the possibility to overview the diffrent resorts in a clean and organized way, get inspired and then let them decide which resort they want a more detailed view over.  
 
 ### Resort details page 
   
@@ -226,17 +197,13 @@ them decide which resort they want a more detailed view over.
   
 <img width="800" src="documentation/resortdetails-description.png">  
   
-After the resort image a detailed description of the resort follows. It is a descriptive text that sums up the listed features of the  
-resort. This textfield creates a more painted picture for the user. Underneath the description a bootstrap image carousel shuffles  
-three images of the resort to give the user some inspiration and overview of the resort.
+After the resort image a detailed description of the resort follows. It is a descriptive text that sums up the listed features of the resort. This textfield creates a more painted picture for the user. Underneath the description a bootstrap image carousel shuffles three images of the resort to give the user some inspiration and overview of the resort.
   
 **Resort listed features**  
   
 <img width="800" src="documentation/resortdetails-listed.png">  
   
-This list is an overview of the resort amenities. The user can find useful information before their planned visit such as opening hours  
-and prices. If a user is in need of a particular lift, they can find all lifting arrangements available for the resort in this listed view. This  
-view is intended as a quick and clean way for the user to get an fast overview of the resort and what they offer.
+This list is an overview of the resort amenities. The user can find useful information before their planned visit such as opening hours and prices. If a user is in need of a particular lift, they can find all lifting arrangements available for the resort in this listed view. This view is intended as a quick and clean way for the user to get an fast overview of the resort and what they offer.
 
 **Rating and comments counter**  
   
@@ -278,8 +245,7 @@ All users can view all comments made by others, but only logged-in users can lea
 
 ## Future Features
 
-The following user stories were scoped out of the project due to time constraints and labelled as "Won't have" 
-and "Could Have" on the project board in Github. It is intended that these user stories will be implemented at a later date.  
+The following user stories were scoped out of the project due to time constraints and labelled as "Won't have" and "Could Have" on the project board in Github. It is intended that these user stories will be implemented at a later date.  
   
 - As a ski user I can find suggestions of activities in the area so that I can vary my stay.
 - As a site user I can find links to local ski rentals so that I can find the equipment I need.
