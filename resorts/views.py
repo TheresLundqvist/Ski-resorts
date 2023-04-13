@@ -7,9 +7,18 @@ from .forms import CommentForm
 
 class ResortList(generic.ListView):
     model = Resort
-    queryset = Resort.objects.filter(status=1).order_by('country')
     template_name = 'index.html'
     paginate_by = 6
+
+    # https://stackoverflow.com/a/63935927
+    # filter if the user searches in navbar, otherwise return all
+    def get_queryset(self, *args, **kwargs):
+        qs = super().get_queryset(*args, **kwargs)
+        query = self.request.GET.get('q')
+        if query:
+            return qs.filter(
+                resort__icontains=query, status=1).order_by('country')
+        return qs
 
 
 class ResortDetail(View):
