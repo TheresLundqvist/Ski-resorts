@@ -194,6 +194,10 @@ td,
     color: #E84610;
 }
 
+.contact-resort:hover {
+    color: #fff;
+}
+
 .q-area {
     background-color: #112B3C;
 }
