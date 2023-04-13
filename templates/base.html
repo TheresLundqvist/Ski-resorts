@@ -67,7 +67,11 @@
       {% if messages %} 
       <h6 class="messages">{% include 'messages.html' %}</h6>
       {% endif %}
-      <button class="btn btn-search" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+      <form class="d-flex" role="search">
+        <input class="form-control mx-2" name="q" type="search" placeholder="Search" value="{{ request.GET.q }}" aria-label="Search">
+        <button class="btn btn-org me-2" type="submit">Search</button>
+      </form>
+      <!-- <button class="btn btn-search" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
         aria-expanded="false" aria-controls="collapseExample">
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
@@ -77,7 +81,7 @@
             <input class="form-control" name="q" type="search" placeholder="Search resorts" value="{{ request.GET.q }}" aria-label="Search">
           </form>
         </div>
-      </div>
+      </div> -->
     </div>
   </nav>
   <!-- Main -->
