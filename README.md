@@ -4,7 +4,7 @@ Ski Resorts website is an online portal with information about ski resorts all o
 
 **Ski resorts locator made it easier for everyone**
 
-The webiste is targeted towards users that want to see what diffrent ski resorts is out there, compare them and find the resort best suited for their needs. Maybe they just want to check the opening season and hours for a resort or simply want to know if a resort offers accommodation or not. For those that are considering a visit to a resort but want to see what others thought of the resort through their experience, can find user comments attached to each resort. Users with disabilities or smaller children can find available lifting arrangements for each resort.
+The webiste is targeted towards users that want to see what diffrent ski resorts is out there, compare them and find the resort best suited for their needs. Maybe they just want to check the opening season and hours for a resort or simply want to know if a resort offers accommodation or not. For those that are considering a visit to a resort but want to see what others thought of the resort through their experience, can find user ratings and comments attached to each resort. Users with disabilities or smaller children can find available lifting arrangements for each resort.
 
 <img width="800" src="documentation/responsive.png">
 
@@ -24,6 +24,8 @@ A visitor to Ski Resorts Locator would be someone who is most likely an adult wh
 
 ### EPIC | Rating and commenting
 
+- As a site user I can give ski resorts star rating so that other users can make a better assessment.
+- As a site user I can see the ski resorts with the best user rating on the site's main page so that I can get inspired at once.
 - As a site admin I can approve comments so that no objectionable comments is shown.
 - As a site user I can comment on ski resorts so that I can share my experience with others.
 
@@ -37,13 +39,12 @@ A visitor to Ski Resorts Locator would be someone who is most likely an adult wh
 ### EPIC | User Account
 
 - As a site user I can see my log in status so that I can visually see if im logged in or out.
-- As a site user I can register an account so that I can add/edit/delete information and keep the resorts details up to date.
+- As a site user I can register an account so that I can add/edit/delete comments I made.
 - As a site user I can log in and out of my account so that I can keep my account secure.
 
 ### User Stories not yet implemented
 The following user stories were scoped out of the project due to time constraints and labelled as "Won't Have" and "Could Have" on the project board on Github. It is intended that these user stories will be implemented at a later date.
 
-- As a site user I can give ski resorts star rating so that other users can make a better assessment.
 - As a ski user I can find suggestions of activities in the area so that I can vary my stay.
 - As a site user I can find links to local ski rentals so that I can find the equipment I need.
 - As a site user I can find links to car rentals so that I can find a rental car as close to the ski resort as possible.
@@ -51,7 +52,6 @@ The following user stories were scoped out of the project due to time constraint
 - As a site user I can view all my bookmarked ski resorts so that I can find them all in one place.
 - As a site user I can filter ski resorts so that I can find resorts in my area.
 - As a site user I can bookmark a ski resort so that I can find the resort easier at a later time.
-- As a site user I can see the ski resorts with the best user rating on the site's main page so that I can get inspired at once.
 
 ## Agile Methodology
 
@@ -189,7 +189,7 @@ The home page includes a bootstrap image carousel that alternates thorugh three 
 
 <img width="800" src="documentation/resort-cards.png">  
   
-The resort cards gives the user a glimpse over the diffrent resorts on the webiste. The user can preview the resort through a image, see a preview of the resort description and a read more button that takes the user to the full detailed resort page. The resort cards are intented to give the user the possibility to overview the diffrent resorts in a clean and organized way, get inspired and then let them decide which resort they want a more detailed view over. The resort rating counter is visable in the card view but not yet implemented due to time constraints. 
+The resort cards gives the user a glimpse over the diffrent resorts on the webiste. The user can preview the resort through a image, see a preview of the resort description and a read more button that takes the user to the full detailed resort page. The resort cards are intented to give the user the possibility to overview the diffrent resorts in a clean and organized way, get inspired and then let them decide which resort they want a more detailed view over. The resort rating counter is visable on the cards and in the full view, so that the user instantly can see which resort has the best rating. 
 
 ### Resort details page 
   
@@ -216,6 +216,13 @@ The counters for rating and comments give the user a fast assessment of the reso
 <img width="800" src="documentation/comments.png">  
   
 All users can view all comments made by others, but only logged-in users can leave a comment. The comments are only visable after and if admin approves. The user receives a message notifying them that the comment is awaiting approval before being published.
+
+**Rating** 
+
+<img width="800" src="documentation/rating.png">  
+
+Users can see the average rating for each resort in the preview cards but also in the full detailed view. Logged in users can leave rating along with a comment to better help others make a descision on which resort to visit next.
+
 
 **Edit and delete comments**  
 
