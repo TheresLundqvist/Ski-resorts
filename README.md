@@ -4,7 +4,7 @@ Ski Resorts website is an online portal with information about ski resorts all o
 
 **Ski resorts locator made it easier for everyone**
 
-The webiste is targeted towards users that want to see what diffrent ski resorts is out there, compare them and find the resort best suited for their needs. Maybe they just want to check the opening season and hours for a resort or simply want to know if a resort offers accommodation or not. For those that are considering a visit to a resort but want to see what others thought of the resort through their experience, can find user comments and ratings attached to each resort. Users with disabilities or smaller children can find available lifting arrangements for each resort.
+The webiste is targeted towards users that want to see what diffrent ski resorts is out there, compare them and find the resort best suited for their needs. Maybe they just want to check the opening season and hours for a resort or simply want to know if a resort offers accommodation or not. For those that are considering a visit to a resort but want to see what others thought of the resort through their experience, can find user comments attached to each resort. Users with disabilities or smaller children can find available lifting arrangements for each resort.
 
 <img width="800" src="documentation/responsive.png">
 
@@ -26,7 +26,6 @@ A visitor to Ski Resorts Locator would be someone who is most likely an adult wh
 
 - As a site admin I can approve comments so that no objectionable comments is shown.
 - As a site user I can comment on ski resorts so that I can share my experience with others.
-- As a site user I can give ski resorts star rating so that other users can make a better assessment.
 
 ### EPIC | Site Navigation
 
@@ -44,6 +43,7 @@ A visitor to Ski Resorts Locator would be someone who is most likely an adult wh
 ### User Stories not yet implemented
 The following user stories were scoped out of the project due to time constraints and labelled as "Won't Have" and "Could Have" on the project board on Github. It is intended that these user stories will be implemented at a later date.
 
+- As a site user I can give ski resorts star rating so that other users can make a better assessment.
 - As a ski user I can find suggestions of activities in the area so that I can vary my stay.
 - As a site user I can find links to local ski rentals so that I can find the equipment I need.
 - As a site user I can find links to car rentals so that I can find a rental car as close to the ski resort as possible.
@@ -99,7 +99,7 @@ A total of five static images is used for the website. Three static images is us
 
 ## Wireframes
 
-I've used [Miro](https://miro.com/app/dashboard/) to design my site wireframes.
+I've used [Miro](https://miro.com/app/dashboard/) to design my sites wireframes.
 
 ### Home Page Wireframes
 
@@ -189,7 +189,7 @@ The home page includes a bootstrap image carousel that alternates thorugh three 
 
 <img width="800" src="documentation/resort-cards.png">  
   
-The resort cards gives the user a glimpse over the diffrent resorts on the webiste. The user can preview the resort through a image, see a preview of the resort description and a read more button that takes the user to the full detailed resort page. The resort cards are intented to give the user the possibility to overview the diffrent resorts in a clean and organized way, get inspired and then let them decide which resort they want a more detailed view over.  
+The resort cards gives the user a glimpse over the diffrent resorts on the webiste. The user can preview the resort through a image, see a preview of the resort description and a read more button that takes the user to the full detailed resort page. The resort cards are intented to give the user the possibility to overview the diffrent resorts in a clean and organized way, get inspired and then let them decide which resort they want a more detailed view over. The resort rating counter is visable in the card view but not yet implemented due to time constraints. 
 
 ### Resort details page 
   

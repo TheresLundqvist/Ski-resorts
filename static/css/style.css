@@ -328,6 +328,10 @@ footer {
     color: grey;
 }
 
+.edit-com {
+    color: #E84610;
+}
+
 /* Media Queries */
 
 /* For media screens from 350px */

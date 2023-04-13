@@ -221,9 +221,9 @@
                         {{ comment.user }}
                     </span>
                     {% if request.user == comment.user %}
-                        <a href="{% url 'edit_comment' comment.id resort.slug %}">Edit</a>
-                        |
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-delete-{{ comment.id }}">Delete</a>
+                        <a href="{% url 'edit_comment' comment.id resort.slug %}" class="edit-com">Edit</a>
+                        <span class="edit-com">|</span>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-delete-{{ comment.id }}" class="edit-com">Delete</a>
                         <div class="modal fade" id="modal-delete-{{ comment.id }}" tabindex="-1"
                             aria-labelledby="modal-label-{{ comment.id }}" aria-hidden="true">
                             <div class="modal-dialog">
