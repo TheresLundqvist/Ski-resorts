@@ -4,9 +4,7 @@
 
 <div class="container mt-3">
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <div>{% include 'messages.html' %}</div>
+        <div class="col-md-4 mx-auto">
             <h3 class="heading">Contact us <i class="fa-solid fa-angles-right"></i></h3>
             <form action="{% url 'contact' %}" method="post"> {% csrf_token %}
                 <div class="form-group">
@@ -33,7 +31,6 @@
                 </div>
             </form>
         </div>
-        <div class="col-md-4"></div>
     </div>
 </div>
 
