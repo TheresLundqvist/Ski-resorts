@@ -6,11 +6,18 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 ps-4 mt-2">
-            <form action="{% url 'edit_comment' comment.id comment.resort.slug %}" method="post">
+        <div class="col mt-5 text-center">
+            <h3>Edit Your Comment</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mx-auto text-center">
+            <form action="{% url 'edit_comment' comment.id comment.resort.slug %}" method="post" class="m-0 p-0">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <button type="submit" class="btn btn-org">Edit Comment</button>
+                <br><br>
+                <small class="text-muted">* edits require admin approval again.</small>
             </form>
         </div>
     </div>
