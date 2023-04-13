@@ -267,7 +267,6 @@ Django allauth was installed and used to create the Sign up, Log in and Log out 
 
 The following user stories were scoped out of the project due to time constraints and labelled as "Won't have" and "Could Have" on the project board in Github. It is intended that these user stories will be implemented at a later date.  
 
-- As a site user I can give ski resorts star rating so that other users can make a better assessment.  
 - As a ski user I can find suggestions of activities in the area so that I can vary my stay.
 - As a site user I can find links to local ski rentals so that I can find the equipment I need.
 - As a site user I can find links to car rentals so that I can find a rental car as close to the ski resort as possible.
@@ -275,7 +274,6 @@ The following user stories were scoped out of the project due to time constraint
 - As a site user I can view all my bookmarked ski resorts so that I can find them all in one place.
 - As a site user I can filter ski resorts so that I can find resorts in my area.
 - As a site user I can bookmark a ski resort so that I can find the resort easier at a later time.
-- As a site user I can see the ski resorts with the best user rating on the site's main page so that I can get inspired at once.
 
 
 ## Tools & Technologies Used
@@ -311,7 +309,7 @@ The following user stories were scoped out of the project due to time constraint
 ## Database Design
 
 I used principles of Object-Oriented Programming throughout this project and Django’s Class-Based Generic Views. Django AllAuth was used for the user authentication system.
-In order to create resort to the webiste a custom resort model was required. The Comment model allows users to comment on resorts and the resort is a foreign key in the comment model given a comment can only be linked to one resort. The contact model is non-relational model as it is only for the users to be able to communicate with the website's owner/admin. 
+In order to create resort to the webiste a custom resort model was required. The Comment model allows users to comment on resorts and the resort is a foreign key in the comment model given a comment can only be linked to one resort. The contact model is non-relational model as it is only for the users to be able to communicate with the website's owner/admin. The rating model allows logged in users to leave a rating and therefore the resort and user fields are foreign keys given that user must be logged in and the rating can only be linked to one resort.
 
 The diagram below details the database schema.
 
