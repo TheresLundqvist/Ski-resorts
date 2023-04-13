@@ -65,7 +65,7 @@
               <div class="card-body">
                 <h5 class="card-title resort">{{ resort.resort }}</h5>
                 <p class="card-text resort-text">{{ resort.description|safe|truncatechars:200 }}</p>
-                <a href="{% url 'resort_detail' resort.slug %}" class="btn btn-org">Read More</a>
+                <a href="{% url 'resort_detail' resort.slug %}" class="btn btn-org">Visit {{ resort.resort }}</a>
                 <hr>
                 <p class="card-text text-muted h6"><i class="fa-solid fa-star"></i>
                   {{ resort.average_rating|floatformat:1 }}</p>
