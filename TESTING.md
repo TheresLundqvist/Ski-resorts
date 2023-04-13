@@ -29,35 +29,25 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 ### JavaScript
 
-This project does not use any JavaScript.
+This project does not include any seperate JavaScript files.
 
 ### Python
 
 I have used the recommended [CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-The CI Python Linter can be used two different ways.
-- Copy/Paste your Python code directly into the linter.
-- As an API, using the "raw" URL appended to the linter URL.
-    - To find the "raw" URL, navigate to your file directly on the GitHub repo.
-    - On that page, GitHub provides a button on the right called "Raw" that you can click on.
-    - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
-    - Examples:
-
-    | File | CI URL | Raw URL | Combined |
-    | --- | --- | --- | --- |
-    | PP3 *manage.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/manage.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/manage.py |
-    | PP3 *asgi.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/asgi.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/asgi.py |
-    | PP3 *settings.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/settings.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/settings.py |
-    | PP3 *urls.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/urls.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/urls.py |
-    | PP3 *wsgi.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/wsgi.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/wsgi.py |
-    | PP3 *views.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/views.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/views.py |
-    | PP3 *urls.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/urls.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/urls.py |
-    | PP3 *models.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/models.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/models.py |
-    | PP3 *forms.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/forms.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/forms.py |
-    | PP3 *apps.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/apps.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/apps.py |
-    | PP3 *admin.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/admin.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/admin.py |
+| File | CI URL | Raw URL | Combined |  
+| --- | --- | --- | --- |
+| PP3 *manage.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/manage.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/manage.py |
+| PP3 *asgi.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/asgi.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/asgi.py |
+| PP3 *settings.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/settings.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/settings.py |
+| PP3 *urls.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/urls.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/urls.py |
+| PP3 *wsgi.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/wsgi.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/skiresorts/wsgi.py |
+| PP3 *views.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/views.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/views.py |
+| PP3 *urls.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/urls.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/urls.py |
+| PP3 *models.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/models.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/models.py |
+| PP3 *forms.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/forms.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/forms.py |
+| PP3 *apps.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/apps.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/apps.py |
+| PP3 *admin.py* file | `https://pep8ci.herokuapp.com/` | `https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/admin.py` | https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/TheresLundqvist/Ski-resorts/main/resorts/admin.py |
 
 
 ## Browser Compatibility
@@ -79,18 +69,18 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Desktop | ![screenshot](documentation/desktop.png) | Works as expected |
 ## Lighthouse Audit
 
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. The webiste could really use a bit of corrections to improve perfomance and accessability but due to time constraints this haven't been done yet.
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot](documentation/mobile-home-lighthouse.png) | A few warnings, slow response time due to large images, could use accessability improvments. |
-| Home | Desktop | ![screenshot](documentation/home-desktop-lighthouse.png) | A few warnings, slow response time due to large images, could use accessability improvments. |
-| Resort Details | Mobile | ![screenshot](documentation/resortdetails-desktop-lighthouse.png) | A few warnings, slow response time due to large images, could use accessability improvments. |
-| Resort Details | Desktop | ![screenshot](documentation/resortdetails-desktop-lighthouse.png) | A few warnings, slow response time due to large images, could use accessability improvments. |
-| About | Mobile | ![screenshot](documentation/about-mobile-lighthouse.png) | A few warnings, slow response time due to large images, could use accessability improvments. |
-| About | Desktop | ![screenshot](documentation/about-desktop-lighthouse.png) |  |
+| Home | Mobile | ![screenshot](documentation/mobile-home-lighthouse.png) | A few warnings, slow response time due to large images. |
+| Home | Desktop | ![screenshot](documentation/home-desktop-lighthouse.png) | A few warnings, slow response time due to large images. |
+| Resort Details | Mobile | ![screenshot](documentation/resortdetails-mobile-lighthouse.png) | A few warnings, slow response time due to large images. |
+| Resort Details | Desktop | ![screenshot](documentation/resortdetails-desktop-lighthouse.png) | A few warnings, slow response time due to large images. |
+| About | Mobile | ![screenshot](documentation/about-mobile-lighthouse.png) | A few warnings, slow response time due to large image. |
+| About | Desktop | ![screenshot](documentation/about-desktop-lighthouse.png) | A few warnings, slow response time due to large image. |
 | Contact | Mobile | ![screenshot](documentation/contact-mobile-lighthouse.png) | A few warnings, could use accessability improvments.  |
-| Contact | Desktop | ![screenshot](documentation/contact-desktop-lighthouse.png) | A few warnings, could use accessability improvments. |
+| Contact | Desktop | ![screenshot](documentation/contact-desktop-lighthouse.png) | A few warnings, slow performance. |
 
 ## Defensive Programming
 
@@ -172,3 +162,4 @@ Defensive programming was manually tested with the below user acceptance testing
 | Bug | Status | Screenshot |
 | --- | --- | --- |
 | Heroku deployment failed, KeyError "etag" issue | Open, site only works now due to changing config var DISABLE_COLLECTSTATIC = 1, something to due with Cloudinary hosting. Time Contraints made this issue left unresolved | ![screenshot](documentation/deployment-failed.png) |
+| Style for Edit and delete links not included in deployed version of website | Open, the links is orange (as I want them) in local version but the original link blue in deployed version | ![screenshot](documentation/bug-edit-comment.png)  ![screenshot](documentation/edit-delete-comment.png) |
