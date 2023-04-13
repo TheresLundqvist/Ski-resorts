@@ -215,22 +215,35 @@ The counters for rating and comments give the user a fast assessment of the reso
   
 <img width="800" src="documentation/comments.png">  
   
-All users can view all comments made by others, but only logged-in users can leave a comment. The comments are only visable after and if admin approves. 
+All users can view all comments made by others, but only logged-in users can leave a comment. The comments are only visable after and if admin approves. The user receives a message notifying them that the comment is awaiting approval before being published.
 
 **Edit and delete comments**  
 
+<img width="400" src="documentation/edit-delete-comment.png">  
+  
+<img width="400" src="documentation/edit-comment.png">  
+  
+<img width="400" src="documentation/delete-comment.png">  
+  
+All logged in users can edit and delete their own comments. The edit and delete links are only visable on the comments made my the logged in user. When user clicks on the edit link they will be redirected to a new edit page, the comment will disappear from the website after the edit until Admin approves of the edited comment.  
 
 
 ### About page  
   
 <img width="800" src="documentation/aboutpage-screenshot.png">  
+  
+The about page gives the user a short background story about the website to the user. 
 
 ### Contact page  
   
 <img width="400" src="documentation/contactpage-screenshot.png">  
+  
+The contact page gives the user the opportunity to contact the website with questions or other subjects surrounding the website.  
 
 ### Account pages  
-  
+
+Django allauth was installed and used to create the Sign up, Log in and Log out functionality. Success messages inform the user if they have logged in/ logged out successfully.
+
 **Register**  
 
 <img width="400" src="documentation/signup-page.png">  
@@ -246,7 +259,8 @@ All users can view all comments made by others, but only logged-in users can lea
 ## Future Features
 
 The following user stories were scoped out of the project due to time constraints and labelled as "Won't have" and "Could Have" on the project board in Github. It is intended that these user stories will be implemented at a later date.  
-  
+
+- As a site user I can give ski resorts star rating so that other users can make a better assessment.  
 - As a ski user I can find suggestions of activities in the area so that I can vary my stay.
 - As a site user I can find links to local ski rentals so that I can find the equipment I need.
 - As a site user I can find links to car rentals so that I can find a rental car as close to the ski resort as possible.
@@ -259,12 +273,8 @@ The following user stories were scoped out of the project due to time constraint
 
 ## Tools & Technologies Used
 
-
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
-- [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
-- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
-- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
@@ -272,65 +282,33 @@ The following user stories were scoped out of the project due to time constraint
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
 - [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
 - [PostgreSQL](https://www.postgresql.org) used as the relational database management.
 - [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
 - [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
+- [Miro](https://miro.com/app/dashboard) used to generate wireframe images.
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) used for overall development and tweaking, including testing responsiveness and performance.
+- [Font Awesome](https://fontawesome.com/) used for icons throughout the site.
+- [Google Fonts](https://fonts.google.com/) used to import and alter fonts on the page.
+- [W3C](https://validator.w3.org/#validate_by_input) used for HTML & CSS Validation.
+- [Coolors](https://coolors.co/) used to create colour palette.
+- [Favicon](https://favicon.io/) Used to create the favicon.
+- [Grammerly](https://app.grammarly.com/) used to proof read the README.md.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) used to manage Django Forms.
+- [Cloudinary](https://cloudinary.com/) used for uploading the images and hosting them.
+- [Bootstrap](https://getbootstrap.com/) CSS Framework for developing responsiveness and styling.
+- [SmartDraw](https://www.smartdraw.com/) used to create the database schema design.
+
 
 ## Database Design
 
-```python
-class Product(models.Model):
-    category = models.ForeignKey(
-        "Category", null=True, blank=True, on_delete=models.SET_NULL)
-    sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
-    description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(
-        max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+I used principles of Object-Oriented Programming throughout this project and Django’s Class-Based Generic Views. Django AllAuth was used for the user authentication system.
+In order to create resort to the webiste a custom resort model was required. The Comment model allows users to comment on resorts and the resort is a foreign key in the comment model given a comment can only be linked to one resort. The contact model is non-relational model as it is only for the users to be able to communicate with the website's owner/admin. 
 
-    def __str__(self):
-        return self.name
+The diagram below details the database schema.
 
-A couple recommendations for building free ERDs:
-- [Draw.io](https://draw.io)
-- [Lucidchart](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-![screenshot](documentation/erd.png)
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Using Markdown formatting to represent an example ERD table using the Product model above:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Table: **Product**
-
-    | **PK** | **id** (unique) | Type | Notes |
-    | --- | --- | --- | --- |
-    | **FK** | category | ForeignKey | FK to **Category** model |
-    | | sku | CharField | |
-    | | name | CharField | |
-    | | description | TextField | |
-    | | has_sizes | BooleanField | |
-    | | price | DecimalField | |
-    | | rating | DecimalField | |
-    | | image_url | URLField | |
-    | | image | ImageField | |
-
+<img width="700" src="documentation/datamodels.png"> 
 
 ## Testing
 
@@ -474,66 +452,29 @@ Use this space to discuss any differences between the local version you've devel
 
 ## Credits
 
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
 ### Content
-
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
 
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
-| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
 | [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
 | [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
 | [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [Django Docs](https://docs.djangoproject.com/en/4.2/)
+| [Bootstrap Docs](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+| [Code Institute Blog Walkthrough Project](https://github.com/Code-Institute-Solutions/Django3blog)
+
 
 ### Media
 
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
-| [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
-
+| [Pexels](https://www.pexels.com) | entire site | image | All imagery on the site was sourced from Pexels.com |
+| [Favicon](https://favicon.io/) | entire site | image | Favicon for website |
+| [Font Awesome](https://fontawesome.com/) | entire site | image | All icons for the site |  
+  
 ### Acknowledgements
-
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
