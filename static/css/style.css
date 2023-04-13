@@ -288,6 +288,10 @@ footer {
     color: #E84610;
 }
 
+.main-text {
+    font-family: Josefin Sans, sans-serif;
+}
+
 .sign-up,
 .forgot {
     color: #E84610;

@@ -123,6 +123,8 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Enter valid username | Field will only accept username format | Pass | |
 | | Enter valid password | Field will only accept password format | Pass | |
 | | Click Login button | Redirects user to home page | Pass | |
+| | Click forgot password link | Redirects user to password reset page | Pass | |
+| | Demand new password | Enter email and press button for password reset | Fail | |
 | Log Out | | | | |
 | | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
@@ -163,3 +165,4 @@ Defensive programming was manually tested with the below user acceptance testing
 | --- | --- | --- |
 | Heroku deployment failed, KeyError "etag" issue | Open, site only works now due to changing config var DISABLE_COLLECTSTATIC = 1, something to due with Cloudinary hosting. Time Contraints made this issue left unresolved | ![screenshot](documentation/deployment-failed.png) |
 | Style for Edit and delete links not included in deployed version of website | Open, the links is orange (as I want them) in local version but the original link blue in deployed version | ![screenshot](documentation/bug-edit-comment.png)  ![screenshot](documentation/edit-delete-comment.png) |
+| Password reset throws an ConnectionRefusedError when trying to demand password reset | Open, time constraints made the error unfixed by project deployment. | ![screenshot](documentation/password-reset-error.png) |
