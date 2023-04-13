@@ -6,12 +6,12 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col mt-5 text-center">
+        <div class="col mt-5">
             <h3>Edit Your Comment</h3>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 mx-auto text-center">
+        <div class="col-md-4">
             <form action="{% url 'edit_comment' comment.id comment.resort.slug %}" method="post" class="m-0 p-0">
                 {% csrf_token %}
                 {{ form|crispy }}
