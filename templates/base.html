@@ -97,6 +97,29 @@
 
     <p class="m-0 text-center student">Made by Therés Lundqvist as a student project for Code Institute</p>
   </footer>
+
+  <script>
+    // auto-hide messages after a few seconds
+    const alerts = document.querySelectorAll("h6 .alert");
+    if (alerts.length > 0) {
+        // only if any alerts found on DOM
+        for (let i = 0; i < alerts.length; i++) {
+            setTimeout(() => {
+                // start after 5000ms
+                setTimeout(() => {
+                    setTimeout(() => {
+                        // remove from DOM entirely
+                        alerts[i].style.display = "none";
+                    }, 1000);
+                }, i * 100);
+                document.querySelector("h6.messages").style.display = "none";
+            }, 5000);
+        }
+    }
+  </script>
+
+  {% block js %}
+  {% endblock %}
 </body>
 
 </html>
