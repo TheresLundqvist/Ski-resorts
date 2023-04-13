@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = ['ski-resorts-locator.herokuapp.com',]
+ALLOWED_HOSTS = ['ski-resorts-locator.herokuapp.com', ]
 host = os.environ.get('SITE_NAME')
 if host:
     ALLOWED_HOSTS.append(host)
