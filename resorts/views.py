@@ -46,6 +46,13 @@ class ResortDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = resort
             comment.save()
+
+            user_rating = request.POST.get("star_rating")
+            if user_rating:
+                star_rating = int(user_rating)
+            Rating.objects.create(
+                resort=resort, user=request.user, star_rating=star_rating
+            )
         else:
             comment_form = CommentForm()
 
