@@ -201,9 +201,21 @@
             <span>{{ total_comments }}</span>
             {% endwith %}
         </div>
-        <div class="col-4 px-0">
+        <div class="col-4 px-0" onclick="copyURL()" id="share-btn">
             <span class="text-uppercase about">Share</span><br>
             <span><i class="fa-regular fa-share-from-square"></i></span>
+        </div>
+        <!-- copy URL for sharing (Bootstrap toast) -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header text-bg-success">
+                    <strong class="me-auto"><i class="fa-solid fa-clipboard-check"></i> Copied URL to Clipboard!</strong>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Share {{ resort.resort }} with your family and friends!
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -211,7 +223,7 @@
             <hr>
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="comments">
         <div class="col-sm-6">
             <div class="px-0">
                 <h3 class="text-h3"><i class="fa-solid fa-comments"></i> Comments</h3>
@@ -273,7 +285,7 @@
                 <p class="text-p">
                     You are posting as: {{ user.username }}
                 </p>
-                <form method="post" style="margin-top: 1.3em;">
+                <form method="post" class="mt-3">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="btn btn-sign">Submit</button>
@@ -291,3 +303,17 @@
     </div>
 </div>
 {% endblock content %}
+
+{% block js %}
+<script>
+    // share button clicked - copy the page URL to clipboard
+    function copyURL() {
+        // https://stackoverflow.com/a/67272301
+        navigator.clipboard.writeText(window.location.href);
+        // bootstrap toast: https://getbootstrap.com/docs/5.3/components/toasts
+        const liveToast = document.getElementById("liveToast");
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(liveToast);
+        toastBootstrap.show();
+    }
+</script>
+{% endblock %}
